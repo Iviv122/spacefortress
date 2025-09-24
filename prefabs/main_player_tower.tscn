@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://c74yyn60hkwom"]
+
+[ext_resource type="Texture2D" uid="uid://b836egcm6tj25" path="res://icon.svg" id="1_so03h"]
+[ext_resource type="Script" uid="uid://diuoc7purwrta" path="res://objects/gameplay/player/player_shooter.gd" id="2_8yf5k"]
+[ext_resource type="PackedScene" uid="uid://crn7ostplg6n3" path="res://prefabs/bullet.tscn" id="3_akihm"]
+[ext_resource type="Script" uid="uid://m2pg3uiik1b" path="res://objects/gameplay/player/stats/player_stats.gd" id="4_akihm"]
+[ext_resource type="Script" uid="uid://csvw2l536jdtj" path="res://objects/gameplay/player/stats/stats.gd" id="5_6demg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_so03h"]
+radius = 31.0
+
+[sub_resource type="Resource" id="Resource_bfew4"]
+script = ExtResource("5_6demg")
+metadata/_custom_type_script = "uid://csvw2l536jdtj"
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_so03h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_so03h")
+
+[node name="PlayerShooter" type="Node2D" parent="." node_paths=PackedStringArray("b")]
+script = ExtResource("2_8yf5k")
+ReloadSpeed = 3.0
+Bul = ExtResource("3_akihm")
+b = NodePath("../ProgressBar")
+metadata/_custom_type_script = "uid://diuoc7purwrta"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -45.0
+offset_top = -100.0
+offset_right = 45.0
+offset_bottom = -73.0
+show_percentage = false
+
+[node name="PlayerExpirience" type="Node" parent="."]
+script = ExtResource("4_akihm")
+basestats = SubResource("Resource_bfew4")
+metadata/_custom_type_script = "uid://m2pg3uiik1b"

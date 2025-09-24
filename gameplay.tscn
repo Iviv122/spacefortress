@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2cpj44xd3dgf"]
+
+[ext_resource type="PackedScene" uid="uid://c74yyn60hkwom" path="res://prefabs/main_player_tower.tscn" id="1_n4psk"]
+[ext_resource type="Script" uid="uid://383rrnsy3s2" path="res://objects/gameplay/enemy/spawner.gd" id="2_ej4tk"]
+[ext_resource type="PackedScene" uid="uid://dsf7ailbkgvdg" path="res://prefabs/enemy.tscn" id="3_oe8ih"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" parent="." instance=ExtResource("1_n4psk")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("2_ej4tk")
+e = ExtResource("3_oe8ih")
+s = 1.0
+metadata/_custom_type_script = "uid://383rrnsy3s2"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0

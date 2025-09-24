@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="consumable" load_steps=4 format=3 uid="uid://cwx1tx5u4nmy8"]
+
+[ext_resource type="Script" uid="uid://csvw2l536jdtj" path="res://objects/gameplay/player/stats/stats.gd" id="1_astlq"]
+[ext_resource type="Script" uid="uid://b0jfbyp7gxs5v" path="res://objects/gameplay/player/consumables/consumable.gd" id="1_cvjjk"]
+
+[sub_resource type="Resource" id="Resource_x6gbb"]
+script = ExtResource("1_astlq")
+metadata/_custom_type_script = "uid://csvw2l536jdtj"
+
+[resource]
+script = ExtResource("1_cvjjk")
+s = SubResource("Resource_x6gbb")
+metadata/_custom_type_script = "uid://b0jfbyp7gxs5v"
