@@ -3,19 +3,27 @@
 [ext_resource type="PackedScene" uid="uid://c74yyn60hkwom" path="res://prefabs/main_player_tower.tscn" id="1_n4psk"]
 [ext_resource type="Script" uid="uid://383rrnsy3s2" path="res://objects/gameplay/enemy/spawner.gd" id="2_ej4tk"]
 [ext_resource type="PackedScene" uid="uid://dsf7ailbkgvdg" path="res://prefabs/enemy.tscn" id="3_oe8ih"]
-[ext_resource type="Script" uid="uid://b1yl5euvcnq7u" path="res://objects/ui/player_stats_label.gd" id="3_smepj"]
+[ext_resource type="Script" uid="uid://b7wjll12w36ab" path="res://objects/gameplay/player/stats/player_expirience.gd" id="3_smepj"]
 [ext_resource type="Script" uid="uid://m2pg3uiik1b" path="res://objects/gameplay/player/stats/player_stats.gd" id="4_cbffv"]
 [ext_resource type="Script" uid="uid://dymmq1a8an8r" path="res://objects/ui/fps_meter.gd" id="4_xuee5"]
 [ext_resource type="Script" uid="uid://b7wjll12w36ab" path="res://objects/gameplay/player/stats/player_expirience.gd" id="6_0m7cd"]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="stats" type="Node" parent="."]
+script = ExtResource("4_cbffv")
+metadata/_custom_type_script = "uid://m2pg3uiik1b"
+
+[node name="PlayerExpirience" type="Node" parent="."]
+script = ExtResource("3_smepj")
+metadata/_custom_type_script = "uid://b7wjll12w36ab"
+
 [node name="Player" parent="." instance=ExtResource("1_n4psk")]
 disable_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+[node name="InGameUI" type="CanvasLayer" parent="Camera2D"]
 follow_viewport_enabled = true
 
 [node name="FPSMeter" type="Label" parent="Camera2D/CanvasLayer"]
