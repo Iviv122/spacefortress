@@ -24,6 +24,11 @@ window/size/window_height_override=700
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[global_group]
+
+enemy_death=""
+stage_end=""
+
 [input]
 
 shoot={

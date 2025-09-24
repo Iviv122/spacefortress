@@ -7,6 +7,8 @@ var dir : Vector2
 
 func _ready():
     area_entered.connect(is_bullet)
+    await get_tree().create_timer(9).timeout
+    queue_free()
 
 func is_bullet(area : Area2D):
     if area is Bullet:
@@ -19,6 +21,7 @@ func damage(d : float):
 
 func die():
     queue_free()
+    get_tree().call_group("enemy_death", "_on_enemy_death")
 
 func SetDir(a : Vector2) -> void:
     dir = a*speed
