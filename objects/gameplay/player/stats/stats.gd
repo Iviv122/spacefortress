@@ -6,7 +6,6 @@ var stats: Array[float]
 func _init():
     stats.resize(StatType.size())
 
-
 func Mult(s: Stats) -> void:
     var iterator = 0
     for i in StatType:
