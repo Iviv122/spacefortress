@@ -3,6 +3,7 @@ class_name Spawner
 
 @export var e : PackedScene
 @export var s : float
+@export var r : float 
 var current_reload
 
 func _ready():
@@ -11,7 +12,6 @@ func _ready():
 var initPos : Vector2 = Vector2(0,0)
 
 func spawn():
-
 	var x = randf_range(-6,6)
 	var pos : Vector2  = Vector2(cos(x),sin(x))*90
 

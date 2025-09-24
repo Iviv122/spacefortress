@@ -1,7 +1,7 @@
 extends Node2D
 class_name PlayerShooter
 
-@export var ReloadSpeed: float;
+@export var ReloadSpeed: float
 @export var Bul: PackedScene
 @export var b : ProgressBar
 
@@ -18,7 +18,6 @@ func shoot() -> void:
 
 	var m = get_global_mouse_position()
 	
-
 	var dir: Vector2 = (m - global_position).normalized()
 	
 	var i: Bullet = Bul.instantiate()
@@ -26,7 +25,6 @@ func shoot() -> void:
 
 	i.global_position = dir*55+ global_position
 	get_tree().root.add_child(i)
-
 
 func _process(delta):
 	current_reload -= delta * ReloadSpeed

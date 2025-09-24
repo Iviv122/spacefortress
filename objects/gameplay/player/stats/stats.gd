@@ -1,44 +1,40 @@
-extends Resource 
+extends Resource
 class_name Stats
 
 signal change
-
-# damage related
-@export var Damage: float # flat buff
-@export var CritChance: float # percent
-
-# attack related
-@export var ReloadSpeed: float # every gun will multyply by this stat
-
-# utility
-@export var Harvesting: float # money mult
-@export var Learnability: float # exp mult
+var stats: Array[float]
+func _init():
+    stats.resize(StatType.size())
 
 
 func Mult(s: Stats) -> void:
-    Damage *= s.Damage
-    CritChance *= s.CritChance
-    ReloadSpeed *= s.ReloadSpeed
-    Harvesting *= s.Harvesting
-    Learnability *= s.Learnability
+    var iterator = 0
+    for i in StatType:
+        stats[iterator] *= s.stats[iterator]
+        iterator += 1
     change.emit()
 
 func Add(s: Stats) -> void:
-    Damage += s.Damage
-    CritChance += s.CritChance
-    ReloadSpeed += s.ReloadSpeed
-    Harvesting += s.Harvesting
-    Learnability += s.Learnability
+    var iterator = 0
+    for i in StatType:
+        stats[iterator] += s.stats[iterator]
+        iterator += 1
     change.emit()
 
 func Copy() -> Stats:
-    var s : Stats = Stats.new()
+    return duplicate()
 
-    Damage = s.Damage
-    CritChance = s.Damage
-    ReloadSpeed = s.Damage
-    Harvesting = s.Damage
-    Learnability = s.Damage
+func Set(amount : float, t: StatType) ->void:
+    stats[t] = amount
+    change.emit()
 
-    return s
+func Get(t: StatType) ->float:
+    return stats[t]
 
+enum StatType {
+    Damage,
+    CritChance,
+    ReloadSpeed,
+    Harvesting,
+    Learnability
+}

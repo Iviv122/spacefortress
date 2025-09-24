@@ -1,3 +1,0 @@
-# Executive class
-extends Node
-
