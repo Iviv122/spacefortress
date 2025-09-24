@@ -8,7 +8,11 @@ var dir : Vector2
 
 func _ready():
     area_entered.connect(die)
+    add_to_group("stage_end")
     await get_tree().create_timer(9).timeout
+    death()
+
+func on_stage_end() ->void:
     death()
 
 func death():

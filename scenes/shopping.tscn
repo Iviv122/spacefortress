@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://lrws15liq52a"]
+
+[ext_resource type="Script" uid="uid://ctv4ktt76y8ie" path="res://objects/shopping/shopping_exit.gd" id="1_nf42t"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ShopUI" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Button" type="Button" parent="ShopUI"]
+offset_right = 79.0
+offset_bottom = 31.0
+text = "Continue"
+script = ExtResource("1_nf42t")
+metadata/_custom_type_script = "uid://ctv4ktt76y8ie"

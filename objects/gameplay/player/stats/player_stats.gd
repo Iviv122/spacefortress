@@ -1,11 +1,11 @@
-extends Node
+extends Resource 
 class_name PlayerStats
 
 
 @export var StartStats: Array[StatTuple]
 var basestats : Stats 
 
-func _ready():
+func init():
 	basestats = Stats.new()
 	print(basestats)
 	for i in StartStats:
