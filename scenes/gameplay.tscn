@@ -44,10 +44,12 @@ metadata/_custom_type_script = "uid://ctbx8d6xsy3ia"
 material = SubResource("ShaderMaterial_ocj2s")
 position = Vector2(51, 14)
 rotation = 2.5144951
+scale = Vector2(1.7, 1.7)
 texture = SubResource("GradientTexture2D_e124b")
 
 [node name="grid" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_din8e")
+scale = Vector2(1.7, 1.7)
 texture = SubResource("GradientTexture2D_e124b")
 
 [node name="InGameUI" parent="." instance=ExtResource("4_ct7aa")]
