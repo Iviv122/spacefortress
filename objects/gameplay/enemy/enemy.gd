@@ -27,7 +27,7 @@ func death() -> void:
     queue_free()
 
 func die():
-    queue_free()
+    death()
     get_tree().call_group("enemy_death", "_on_enemy_death")
 
 func SetDir(a: Vector2) -> void:

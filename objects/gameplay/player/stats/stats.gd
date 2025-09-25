@@ -30,7 +30,26 @@ func Set(amount : float, t: StatType) ->void:
 func Get(t: StatType) ->float:
     return stats[t]
 
+static func Name(t: StatType) -> String:
+    match t:
+        StatType.MaxHealth:
+            return "Max Health"
+        StatType.Damage:
+            return "Damage"
+        StatType.CritChance:
+            return "Crit Chance"
+        StatType.ReloadSpeed:
+            return "Reload Speed"
+        StatType.Harvesting:
+            return "Harvesting"
+        StatType.Learnability:
+            return "Learnability"
+        _:
+            return "Unknown"
+    
+
 enum StatType {
+    MaxHealth,
     Damage,
     CritChance,
     ReloadSpeed,

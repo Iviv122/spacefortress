@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtl7semelajrn"]
+
+[ext_resource type="Script" uid="uid://d4ml58s2d4g8i" path="res://objects/ui/wave_time_left.gd" id="1_fqvwy"]
+[ext_resource type="Script" uid="uid://dymmq1a8an8r" path="res://objects/ui/fps_meter.gd" id="2_ria60"]
+[ext_resource type="Script" uid="uid://cs3v487omy35j" path="res://objects/ui/xp_progression.gd" id="3_6qwj3"]
+[ext_resource type="Script" uid="uid://cty84g153l6p6" path="res://objects/ui/health_meter.gd" id="4_276nr"]
+
+[node name="InGameUI" type="CanvasLayer"]
+
+[node name="WaveTimer" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+script = ExtResource("1_fqvwy")
+metadata/_custom_type_script = "uid://d4ml58s2d4g8i"
+
+[node name="FPSMeter" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+script = ExtResource("2_ria60")
+metadata/_custom_type_script = "uid://dymmq1a8an8r"
+
+[node name="ExpProgress" type="ProgressBar" parent="."]
+offset_right = 82.0
+offset_bottom = 27.0
+show_percentage = false
+script = ExtResource("3_6qwj3")
+metadata/_custom_type_script = "uid://cs3v487omy35j"
+
+[node name="HealthMeter" type="ProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -118.0
+offset_bottom = 26.999973
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 1
+show_percentage = false
+script = ExtResource("4_276nr")
+metadata/_custom_type_script = "uid://cty84g153l6p6"

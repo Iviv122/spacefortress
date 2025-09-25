@@ -10,16 +10,23 @@ var g
 var s
 
 var IsPlaying = true
-
+var IsGameOver = false
 func _ready():
 	add_to_group("stage_end")
+	add_to_group("game_over")
 	play()
 
 
 func on_stage_end()->void:
 	switch()
 
+func _on_game_over() ->void:
+	IsGameOver = true
+
 func switch():
+	if !IsGameOver:
+		return;
+
 	if g != null:
 		g.queue_free()
 	if s != null:

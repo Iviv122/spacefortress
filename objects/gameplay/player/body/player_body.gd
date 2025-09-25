@@ -1,12 +1,28 @@
 extends Area2D
 class_name PlayerBody
 
+@export var DeathParticles : PackedScene
+
 signal damaged
+
+var dead = false
 
 func _ready():
     area_entered.connect(damage)
+    add_to_group("game_over")
+
+func _on_game_over() ->void:
+    death()
+
+func death() -> void:
+    if !dead:
+        for i in range(0,3):
+            add_child(DeathParticles.instantiate())
+            await get_tree().create_timer(0.5).timeout
+        dead = true
 
 func damage(_a):
     if _a is Enemy:
         damaged.emit()
-        queue_free()
+        _a.die()
+        get_tree().call_group("player_got_damage","_on_player_got_damage",1)
