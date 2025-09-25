@@ -34,6 +34,8 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 enemy_death=""
 stage_end=""
+game_over=""
+next_shopping_step=""
 
 [input]
 

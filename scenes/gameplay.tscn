@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1aad6rat5ee0"]
+[gd_scene load_steps=8 format=3 uid="uid://b1aad6rat5ee0"]
 
 [ext_resource type="Script" uid="uid://ctbx8d6xsy3ia" path="res://objects/gameplay/game_play_entrypoint.gd" id="1_ct7aa"]
 [ext_resource type="Script" uid="uid://dymmq1a8an8r" path="res://objects/ui/fps_meter.gd" id="1_l1v76"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dfh0nudgl6j6c" path="res://prefabs/spawner.tscn" id="2_ocj2s"]
 [ext_resource type="PackedScene" uid="uid://c74yyn60hkwom" path="res://prefabs/main_player_tower.tscn" id="3_din8e"]
 [ext_resource type="Script" uid="uid://cs3v487omy35j" path="res://objects/ui/xp_progression.gd" id="3_ocj2s"]
+[ext_resource type="Script" uid="uid://d4ml58s2d4g8i" path="res://objects/ui/wave_time_left.gd" id="4_4bh5q"]
 
 [node name="Gameplay" type="Node2D"]
 script = ExtResource("1_ct7aa")
@@ -16,6 +17,15 @@ metadata/_custom_type_script = "uid://ctbx8d6xsy3ia"
 
 [node name="InGameUI" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
+
+[node name="FPSMeter2" type="Label" parent="InGameUI" node_paths=PackedStringArray("t")]
+offset_left = -20.0
+offset_top = -288.0
+offset_right = 20.0
+offset_bottom = -265.0
+script = ExtResource("4_4bh5q")
+t = NodePath("../..")
+metadata/_custom_type_script = "uid://d4ml58s2d4g8i"
 
 [node name="FPSMeter" type="Label" parent="InGameUI"]
 offset_left = 216.0

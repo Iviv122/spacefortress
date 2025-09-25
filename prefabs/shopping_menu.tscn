@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://8rw73ithuuwt"]
+
+[ext_resource type="Script" uid="uid://ctv4ktt76y8ie" path="res://objects/shopping/shopping_exit.gd" id="1_sui07"]
+
+[node name="ShoopingMenu" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -219.5
+offset_top = -15.5
+offset_right = 219.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="ExitButton" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+text = "Continue"
+script = ExtResource("1_sui07")
+metadata/_custom_type_script = "uid://ctv4ktt76y8ie"

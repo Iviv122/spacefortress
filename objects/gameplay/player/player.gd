@@ -4,14 +4,15 @@ class_name Player
 
 @export var stats : PlayerStats
 @export var expirience : PlayerExpirience
+var inventory : Inventory = Inventory.new()
 
 func _on_enemy_death():
-    expirience._on_enemy_death()
-    # inventory ig
+	expirience._on_enemy_death()
+	# inventory ig
 
 func init() ->void:
-    stats.init()
+	stats.init()
 
 func _ready():
-    init()
-    add_to_group("enemy_death")
+	init()
+	add_to_group("enemy_death")

@@ -19,7 +19,8 @@ func death():
     queue_free()
 
 func die(_a):
-    death()
+    if _a is Enemy:
+        death()
 
 func SetDir(d : Vector2) -> void:
     dir = d*Speed 

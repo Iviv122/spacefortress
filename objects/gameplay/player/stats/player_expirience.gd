@@ -6,6 +6,7 @@ class_name PlayerExpirience
 var Exp : float = 0
 var ExpToNextLevel : float = 9
 var Level : int = 0
+var SkillPoints : int = 0
 
 signal levelup
 signal gained(amount : float,ToLevelUp : float)
@@ -23,6 +24,7 @@ func AddExp(amount:float):
 func level_up():
     ExpToNextLevel += (Level+3)*(Level*3)
     Level+=1 
+    SkillPoints +=1
     Exp = 0
     levelup.emit()
     gained.emit(Exp,ExpToNextLevel)
