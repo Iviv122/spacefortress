@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://8rw73ithuuwt"]
+[gd_scene load_steps=3 format=3 uid="uid://8rw73ithuuwt"]
 
 [ext_resource type="Script" uid="uid://ctv4ktt76y8ie" path="res://objects/shopping/shopping_exit.gd" id="1_sui07"]
+[ext_resource type="Script" uid="uid://b1yl5euvcnq7u" path="res://objects/ui/player_stats_label.gd" id="2_j67rq"]
 
 [node name="ShoopingMenu" type="CanvasLayer"]
 
@@ -37,3 +38,12 @@ layout_mode = 2
 text = "Continue"
 script = ExtResource("1_sui07")
 metadata/_custom_type_script = "uid://ctv4ktt76y8ie"
+
+[node name="PlayerStatsLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 64.0
+offset_right = 109.0
+offset_bottom = 87.0
+script = ExtResource("2_j67rq")
+metadata/_custom_type_script = "uid://b1yl5euvcnq7u"

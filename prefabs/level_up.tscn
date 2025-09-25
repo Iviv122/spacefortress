@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://lxalexo5gkqc"]
+[gd_scene load_steps=3 format=3 uid="uid://lxalexo5gkqc"]
 
 [ext_resource type="Script" uid="uid://df232w1qx3ssr" path="res://objects/shopping/level_up.gd" id="1_pm1ok"]
+[ext_resource type="Resource" uid="uid://dg8b0uy1ryqln" path="res://content/lvluplist.tres" id="2_cnwj6"]
 
 [node name="LevelUp" type="CanvasLayer"]
 
@@ -36,6 +37,7 @@ alignment = 1
 layout_mode = 2
 text = "Damage Up"
 script = ExtResource("1_pm1ok")
+l = ExtResource("2_cnwj6")
 metadata/_custom_type_script = "uid://df232w1qx3ssr"
 
 [node name="Button2" type="Button" parent="Panel/HBoxContainer"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RandomStatBuffList" load_steps=4 format=3 uid="uid://dg8b0uy1ryqln"]
+
+[ext_resource type="Script" uid="uid://bvu0cw01saugu" path="res://objects/gameplay/player/consumables/random_stat_buff.gd" id="1_epwm1"]
+[ext_resource type="Script" uid="uid://csp1ek8aewptv" path="res://objects/gameplay/player/consumables/random_stat_buff_list.gd" id="2_om2iy"]
+[ext_resource type="Resource" uid="uid://dkgk7rhqb0ofm" path="res://content/lvlup/+1.tres" id="2_sxtd6"]
+
+[resource]
+script = ExtResource("2_om2iy")
+l = Array[ExtResource("1_epwm1")]([ExtResource("2_sxtd6")])
+metadata/_custom_type_script = "uid://csp1ek8aewptv"

@@ -17,7 +17,7 @@ func next_step():
 		var lvl = lvlUp.instantiate()
 		add_child(lvl)
 		PlayerStatsInstance.expirience.SkillPoints -= 1
-		return ;
+		return;
 
 	var shop = shopping.instantiate()
 	add_child(shop)
