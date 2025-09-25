@@ -16,9 +16,7 @@ func _on_game_over() ->void:
 
 func death() -> void:
     if !dead:
-        for i in range(0,3):
-            add_child(DeathParticles.instantiate())
-            await get_tree().create_timer(0.5).timeout
+        add_child(DeathParticles.instantiate())
         dead = true
 
 func damage(_a):

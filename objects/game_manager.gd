@@ -1,12 +1,12 @@
 extends Node
 class_name GameManager
 
-@export var gameplay : PackedScene 
-@export var shop : PackedScene
-@export var RoundDuration : float = 15 
+@export var gameplay: PackedScene
+@export var shop: PackedScene
+@export var RoundDuration: float = 15
 
 
-var g 
+var g
 var s
 
 var IsPlaying = true
@@ -17,33 +17,32 @@ func _ready():
 	play()
 
 
-func on_stage_end()->void:
+func on_stage_end() -> void:
+	if IsGameOver:
+		return ;
 	switch()
 
-func _on_game_over() ->void:
+
+func _on_game_over() -> void:
 	IsGameOver = true
 
 func switch():
-	if !IsGameOver:
-		return;
-
 	if g != null:
 		g.queue_free()
 	if s != null:
 		s.queue_free()
 	
-	if IsPlaying :
+	if IsPlaying:
 		shopping()
 		IsPlaying = false
 	else:
 		play()
-		IsPlaying = true 
+		IsPlaying = true
 
 func shopping():
 	s = shop.instantiate()
 	add_child(s)
 
 func play():
-	
 	g = gameplay.instantiate()
 	add_child(g)

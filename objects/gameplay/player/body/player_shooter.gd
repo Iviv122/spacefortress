@@ -8,7 +8,12 @@ class_name PlayerShooter
 var reload: SceneTreeTimer
 var current_reload: float
 
+func _on_game_over():
+	queue_free()
+
 func _ready():
+
+	add_to_group("game_over")
 	current_reload = 0
 	b.min_value = 0
 	b.max_value = 1
