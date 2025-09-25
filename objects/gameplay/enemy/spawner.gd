@@ -1,9 +1,10 @@
 extends Node2D
 class_name Spawner
 
-@export var e : PackedScene
+@export var e : Array[PackedScene]
 @export var speed : float
 @export var radius : float 
+
 var current_reload
 
 func _ready():
@@ -15,7 +16,7 @@ func spawn():
 	var x = randf_range(-6,6)
 	var pos : Vector2  = Vector2(cos(x),sin(x))*90
 
-	var i : Enemy = e.instantiate()
+	var i : Enemy = e.pick_random().instantiate()
 	i.global_position = pos*radius
 	i.SetDir(initPos-pos)
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkl0pothf0pjr"
-path="res://.godot/imported/wirehexagon.png-01655385544b5974823b40b9629d242f.ctex"
+uid="uid://ds1gcewnl784s"
+path="res://.godot/imported/particle.png-095c60e06f9788ee3805f4ff5c00865f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://raw_assets/wirehexagon.png"
-dest_files=["res://.godot/imported/wirehexagon.png-01655385544b5974823b40b9629d242f.ctex"]
+source_file="res://raw_assets/sprites/particle.png"
+dest_files=["res://.godot/imported/particle.png-095c60e06f9788ee3805f4ff5c00865f.ctex"]
 
 [params]
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcqup1e3vc10v"]
+
+[ext_resource type="Script" uid="uid://bdiilbfy6yadc" path="res://objects/gameplay/enemy/enemy.gd" id="1_53325"]
+[ext_resource type="Texture2D" uid="uid://caxdyq60ia4fy" path="res://raw_assets/triangle.png" id="2_oxwg1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ecxuq"]
+
+[node name="Enemy" type="Area2D"]
+script = ExtResource("1_53325")
+speed = 4.0
+health = 0.5
+metadata/_custom_type_script = "uid://bdiilbfy6yadc"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ecxuq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_oxwg1")

@@ -29,9 +29,9 @@ func update() ->void:
 
 func _set_health(value: float) -> void:
 	_current_health = value
-	if CurrentHealth > MaxHealth:
+	if _current_health > MaxHealth:
 		_current_health = MaxHealth
-	if CurrentHealth <= 0:
+	if _current_health <= 0:
 		print("Health : death")
 		death.emit()
 	changed.emit(_current_health, MaxHealth)

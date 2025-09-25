@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c74yyn60hkwom"]
+[gd_scene load_steps=9 format=3 uid="uid://c74yyn60hkwom"]
 
 [ext_resource type="Script" uid="uid://dniiyisbbtlfx" path="res://objects/gameplay/player/body/player_body.gd" id="1_6demg"]
 [ext_resource type="Script" uid="uid://diuoc7purwrta" path="res://objects/gameplay/player/body/player_shooter.gd" id="2_8yf5k"]
 [ext_resource type="PackedScene" uid="uid://4h1tdd1q885d" path="res://prefabs/effects/player_destroy.tscn" id="2_p3mky"]
-[ext_resource type="Texture2D" uid="uid://bkl0pothf0pjr" path="res://raw_assets/wirehexagon.png" id="2_p3vau"]
+[ext_resource type="Texture2D" uid="uid://bkl0pothf0pjr" path="res://raw_assets/sprites/wirehexagon.png" id="2_p3vau"]
 [ext_resource type="PackedScene" uid="uid://crn7ostplg6n3" path="res://prefabs/ingame/bullet.tscn" id="3_akihm"]
+[ext_resource type="Script" uid="uid://cgoxmrkl2ceb4" path="res://objects/ui/sprite_rotate.gd" id="4_ir2om"]
 [ext_resource type="Script" uid="uid://c1lwwnddbqrhu" path="res://objects/util/destroy_on_game_over.gd" id="6_ulw3n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_so03h"]
@@ -21,6 +22,9 @@ shape = SubResource("CircleShape2D_so03h")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_p3vau")
+script = ExtResource("4_ir2om")
+speed = 35.0
+metadata/_custom_type_script = "uid://cgoxmrkl2ceb4"
 
 [node name="PlayerShooter" type="Node2D" parent="." node_paths=PackedStringArray("b")]
 script = ExtResource("2_8yf5k")

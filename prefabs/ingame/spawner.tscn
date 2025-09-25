@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfh0nudgl6j6c"]
+[gd_scene load_steps=5 format=3 uid="uid://dfh0nudgl6j6c"]
 
 [ext_resource type="Script" uid="uid://383rrnsy3s2" path="res://objects/gameplay/enemy/spawner.gd" id="1_p4gkq"]
-[ext_resource type="PackedScene" uid="uid://dsf7ailbkgvdg" path="res://prefabs/ingame/enemy.tscn" id="2_ohdau"]
+[ext_resource type="PackedScene" uid="uid://dsf7ailbkgvdg" path="res://prefabs/ingame/enemy_normal.tscn" id="2_ohdau"]
+[ext_resource type="PackedScene" uid="uid://bcqup1e3vc10v" path="res://prefabs/ingame/enemy_fast.tscn" id="2_y5m3e"]
+[ext_resource type="PackedScene" uid="uid://c0i3wg4l8aol0" path="res://prefabs/ingame/enemy_slow.tscn" id="3_lecqo"]
 
 [node name="Spawner" type="Node2D"]
 script = ExtResource("1_p4gkq")
-e = ExtResource("2_ohdau")
+e = Array[PackedScene]([ExtResource("2_y5m3e"), ExtResource("3_lecqo"), ExtResource("2_ohdau")])
 speed = 1.0
 radius = 5.0
 metadata/_custom_type_script = "uid://383rrnsy3s2"

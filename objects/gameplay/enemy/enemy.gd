@@ -1,8 +1,8 @@
 extends Area2D
 class_name Enemy
 
-var speed: float = 2
-var health: float = 1
+@export var speed: float = 2
+@export var health: float = 1
 var dir: Vector2
 
 func _ready():
@@ -32,6 +32,8 @@ func die():
 
 func SetDir(a: Vector2) -> void:
     dir = a * speed
+    rotation = dir.angle()
+
 
 func _process(delta):
     global_position += dir * delta

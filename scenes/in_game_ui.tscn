@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtl7semelajrn"]
+[gd_scene load_steps=6 format=3 uid="uid://dtl7semelajrn"]
 
 [ext_resource type="Script" uid="uid://d4ml58s2d4g8i" path="res://objects/ui/wave_time_left.gd" id="1_fqvwy"]
 [ext_resource type="Script" uid="uid://dymmq1a8an8r" path="res://objects/ui/fps_meter.gd" id="2_ria60"]
 [ext_resource type="Script" uid="uid://cs3v487omy35j" path="res://objects/ui/xp_progression.gd" id="3_6qwj3"]
 [ext_resource type="Script" uid="uid://cty84g153l6p6" path="res://objects/ui/health_meter.gd" id="4_276nr"]
+[ext_resource type="Script" uid="uid://bl76jg5jjmw0u" path="res://objects/ui/money.gd" id="5_ria60"]
 
 [node name="InGameUI" type="CanvasLayer"]
 
@@ -23,7 +24,8 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -40.0
-offset_bottom = 23.0
+offset_top = 39.0
+offset_bottom = 62.0
 grow_horizontal = 0
 script = ExtResource("2_ria60")
 metadata/_custom_type_script = "uid://dymmq1a8an8r"
@@ -48,3 +50,10 @@ theme_override_constants/outline_size = 1
 show_percentage = false
 script = ExtResource("4_276nr")
 metadata/_custom_type_script = "uid://cty84g153l6p6"
+
+[node name="MoneyLabel" type="Label" parent="."]
+offset_top = 33.0
+offset_right = 40.0
+offset_bottom = 49.0
+script = ExtResource("5_ria60")
+metadata/_custom_type_script = "uid://bl76jg5jjmw0u"

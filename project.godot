@@ -39,6 +39,10 @@ game_over=""
 next_shopping_step=""
 player_got_damage=""
 
+[gui]
+
+theme/custom_font="uid://dxle2yh3pvkyg"
+
 [input]
 
 shoot={
@@ -55,4 +59,4 @@ textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 anti_aliasing/screen_space_roughness_limiter/enabled=false
-environment/defaults/default_clear_color=Color(0.13333334, 0.13725491, 0.13725491, 1)
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
