@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 PlayerStatsInstance="*res://prefabs/lists/player.tscn"
 LvlUpBuffs="*res://prefabs/lists/lvl_up_buffs.tscn"
+SessionStatsInstance="*res://prefabs/lists/session_stats.tscn"
 
 [display]
 
@@ -38,6 +39,8 @@ stage_end=""
 game_over=""
 next_shopping_step=""
 player_got_damage=""
+item_bought=""
+reroll=""
 
 [gui]
 

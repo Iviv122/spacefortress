@@ -1,7 +1,6 @@
 extends Resource 
 class_name PlayerStats
 
-
 @export var StartStats: Array[StatTuple]
 var basestats : Stats 
 
