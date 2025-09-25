@@ -1,15 +1,15 @@
 extends Node 
-class_name LevelUpBuffList 
+class_name ItemPool 
 
-@export var l : Array[StatTuple]
+@export var l : Array[Item]
 
-var queue : Array[StatTuple]
+var queue : Array[Item]
 
 func PopulateQueue() ->void:
     queue = l.duplicate()
     queue.shuffle()
 
-func PullOut() -> StatTuple:
+func PullOut() -> Item:
     if queue.size() <= 0:
         PopulateQueue()
     var i = queue.pick_random()
@@ -17,4 +17,5 @@ func PullOut() -> StatTuple:
     return i
 
 func _ready():
-    print("buffs amount: ", l.size())
+    PopulateQueue()
+    print("here are " + str(queue.size()) + " items")

@@ -1,10 +1,13 @@
 extends Button 
 class_name BuyButton
 
-@export	var ShopItem : Item 
+var ShopItem : Item 
 
-func _ready() -> void:
-	text = "Buy"
+func _pressed() -> void:
+	PlayerStatsInstance.inventory.AddItem(ShopItem)
+	queue_free()
 
-#func _pressed() -> void:
-
+func SetItem(item : Item) -> void:
+	ShopItem = item
+	icon = item.icon
+	text = item.name + "\n" + item.discription + "\n" + "price: " + str(item.price)

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MarkOfSacrifice" load_steps=3 format=3 uid="uid://br1rl15hya2q6"]
+
+[ext_resource type="Texture2D" uid="uid://dbppfj1tct7nv" path="res://raw_assets/markofsacrifice.png" id="1_cw31h"]
+[ext_resource type="Script" uid="uid://dqkq25r1r0hnw" path="res://objects/gameplay/player/items/items/mark_of_sacrifice.gd" id="1_vgapd"]
+
+[resource]
+script = ExtResource("1_vgapd")
+name = "Mark of sacrifice"
+discription = "Sets your health to 1. damage +1"
+icon = ExtResource("1_cw31h")
+metadata/_custom_type_script = "uid://dqkq25r1r0hnw"
