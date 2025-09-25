@@ -32,7 +32,7 @@ func die():
 
 func SetDir(a: Vector2) -> void:
     dir = a * speed
-    rotation = dir.angle()
+    global_rotation = dir.angle() 
 
 
 func _process(delta):

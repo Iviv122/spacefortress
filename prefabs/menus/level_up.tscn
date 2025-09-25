@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://lxalexo5gkqc"]
 
-[ext_resource type="Script" uid="uid://u3ja3acdhfce" path="res://objects/shopping/lvl_up_menu.gd" id="1_bmr4d"]
+[ext_resource type="Script" uid="uid://u3ja3acdhfce" path="res://objects/shopping/level up/lvl_up_menu.gd" id="1_bmr4d"]
 
 [node name="LevelUp" type="CanvasLayer"]
 
