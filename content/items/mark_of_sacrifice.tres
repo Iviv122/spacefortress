@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="ItemStatsMultiply" load_steps=8 format=3 uid="uid://dfedkurajn78r"]
+
+[ext_resource type="Script" uid="uid://rig56r1trtlt" path="res://objects/items/simple_items/item_stats_multiply.gd" id="1_vgapd"]
+[ext_resource type="Texture2D" uid="uid://pvm5l067583a" path="res://raw_assets/sprite/markofsacrifice.png" id="2_6jq52"]
+[ext_resource type="Script" uid="uid://csebc5pq3b5lr" path="res://objects/player_stats/stat.gd" id="2_akwv7"]
+[ext_resource type="Script" uid="uid://bl1gi7l8bbxj7" path="res://objects/player_stats/stat_list.gd" id="3_6jq52"]
+
+[sub_resource type="Resource" id="Resource_akwv7"]
+script = ExtResource("2_akwv7")
+_a = 3.0
+_type = 6
+metadata/_custom_type_script = "uid://csebc5pq3b5lr"
+
+[sub_resource type="Resource" id="Resource_q7w2k"]
+script = ExtResource("2_akwv7")
+_a = 2.0
+_type = 1
+metadata/_custom_type_script = "uid://csebc5pq3b5lr"
+
+[sub_resource type="Resource" id="Resource_6jq52"]
+script = ExtResource("3_6jq52")
+list = Array[ExtResource("2_akwv7")]([SubResource("Resource_akwv7"), SubResource("Resource_q7w2k")])
+metadata/_custom_type_script = "uid://bl1gi7l8bbxj7"
+
+[resource]
+script = ExtResource("1_vgapd")
+stats = SubResource("Resource_6jq52")
+sprite = ExtResource("2_6jq52")
+name = "Mark of sacrifice"
+description = "Doubles your damage
+Triples your baiting"
+metadata/_custom_type_script = "uid://rig56r1trtlt"

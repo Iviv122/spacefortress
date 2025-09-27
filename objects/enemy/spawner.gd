@@ -24,7 +24,7 @@ func spawn():
 	add_child(i)
 
 func _process(delta):
-	current_reload -= delta*speed
+	current_reload -= delta*speed*PlayerInstance.stats.Get(Stats.StatType.Baiting)
 	if current_reload <=0:
 		spawn()
 		current_reload = 1
