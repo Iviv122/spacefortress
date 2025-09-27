@@ -64,27 +64,31 @@ texture = SubResource("GradientTexture2D_n7ifp")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -596.0
-offset_right = -556.0
-offset_bottom = 16.0
+offset_left = -168.0
+offset_top = 10.0
+offset_right = 168.0
+offset_bottom = 26.0
 grow_horizontal = 2
+text = "SELECT YOUR CHARACTER"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 14
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -252.0
-offset_top = -36.0
-offset_right = 252.0
-offset_bottom = 36.0
+offset_top = -252.0
+offset_bottom = 252.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 11
 alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
 
 [node name="CharacterSelect" type="Button" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Berserk
  
 
@@ -94,6 +98,7 @@ Double damage
 Double attack speed
 Triple enemies"
 icon = ExtResource("2_n7ifp")
+autowrap_mode = 3
 icon_alignment = 1
 vertical_icon_alignment = 0
 script = ExtResource("2_fxf00")
@@ -103,12 +108,13 @@ metadata/_custom_type_script = "uid://djl5bv1ndm5mk"
 
 [node name="CharacterSelect2" type="Button" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
-text = "Engineer
- 
+size_flags_horizontal = 3
+text = "Engineer 
 
  
 Has Additional turret from start"
 icon = ExtResource("4_nk33d")
+autowrap_mode = 3
 icon_alignment = 1
 vertical_icon_alignment = 0
 script = ExtResource("2_fxf00")
@@ -118,15 +124,20 @@ metadata/_custom_type_script = "uid://djl5bv1ndm5mk"
 
 [node name="CharacterSelect3" type="Button" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Hollow warrior
  
 
  
 Has nothing from start"
 icon = ExtResource("5_l485o")
+autowrap_mode = 3
 icon_alignment = 1
 vertical_icon_alignment = 0
 script = ExtResource("2_fxf00")
 item_list = SubResource("Resource_d1yaq")
 scene = ExtResource("8_7dy4e")
 metadata/_custom_type_script = "uid://djl5bv1ndm5mk"
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
