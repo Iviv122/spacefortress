@@ -2,7 +2,6 @@ extends VBoxContainer
 class_name ShowPlayerStats
 
 func redraw()->void:
-
 	for i in get_children():
 		i.queue_free()
 
@@ -15,6 +14,11 @@ func redraw()->void:
 
 		add_child(l)
 
+	await  get_tree().create_timer(0.1).timeout
+	redraw()
+
+
 func _ready():
 	PlayerInstance.stats.changed.connect(redraw)
 	redraw()
+

@@ -28,7 +28,6 @@ func _ready() -> void:
 	rarity = get_random_rarity()
 	GetColor()
 
-
 enum Rarity {
 	Basic,
 	Rare,
