@@ -8,6 +8,7 @@ var dir : Vector2
 
 func _ready():
     area_entered.connect(collide)
+    global_position = Vector2.ZERO
     damage *= PlayerInstance.stats.Get(Stats.StatType.Damage)
     dir = speed * Vector2.UP.rotated(randf_range(-360,360)) 
 

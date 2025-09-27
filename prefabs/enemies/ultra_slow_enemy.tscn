@@ -9,7 +9,7 @@ radius = 34.655445
 [node name="ultra_slow" type="Area2D"]
 script = ExtResource("1_8hexq")
 speed = 0.5
-health = 10.0
+health = 8.0
 metadata/_custom_type_script = "uid://clprfp1y5e07q"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

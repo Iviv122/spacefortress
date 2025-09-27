@@ -20,7 +20,7 @@ func spawn(thing : PackedScene):
 
 func on_main_gun_shoot():
 	for i in items:
-		i.on_enemy_death()
+		i.on_main_gun_shoot()
 
 func on_enemy_death():
 	for i in items:

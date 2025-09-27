@@ -6,21 +6,27 @@ class_name Spawner
 @export var radius : float 
 
 var current_reload
+var queue : Array[PackedScene]
+var index = 0
 
 func _ready():
 	if PlayerInstance.misc_stats.wave_count != 1:
 		speed *= PlayerInstance.misc_stats.wave_count+PlayerInstance.misc_stats.wave_count
 	else:
 		speed = 1
+	queue  = e.duplicate()
+	queue.shuffle()
 	current_reload = 1
 
 var initPos : Vector2 = Vector2(0,0)
 
 func spawn():
+	index %= queue.size()
 	var x = randf_range(-6,6)
 	var pos : Vector2  = Vector2(cos(x),sin(x))*90
 
-	var i : Enemy = e.pick_random().instantiate()
+	var i : Enemy = queue[index].instantiate()
+	index +=1
 	i.global_position = pos*radius
 	i.SetDir(initPos-pos)
 
