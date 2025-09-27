@@ -1,7 +1,7 @@
 extends VBoxContainer 
 class_name ShowPlayerStats
 
-func update()->void:
+func redraw()->void:
 
 	for i in get_children():
 		i.queue_free()
@@ -16,5 +16,5 @@ func update()->void:
 		add_child(l)
 
 func _ready():
-	update()
-	PlayerInstance.stats.changed.connect(update)
+	PlayerInstance.stats.changed.connect(redraw)
+	redraw()

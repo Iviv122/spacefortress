@@ -8,7 +8,10 @@ class_name Spawner
 var current_reload
 
 func _ready():
-	speed *= PlayerInstance.misc_stats.wave_count*PlayerInstance.misc_stats.wave_count
+	if PlayerInstance.misc_stats.wave_count != 1:
+		speed *= PlayerInstance.misc_stats.wave_count+PlayerInstance.misc_stats.wave_count
+	else:
+		speed = 1
 	current_reload = 1
 
 var initPos : Vector2 = Vector2(0,0)

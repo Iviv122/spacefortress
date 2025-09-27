@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="ItemStatsAdd" load_steps=8 format=3 uid="uid://b8ljtlqsk8ftk"]
+
+[ext_resource type="Script" uid="uid://dq4mb3t21k0or" path="res://objects/items/simple_items/item_stats_add.gd" id="1_lbvpc"]
+[ext_resource type="Texture2D" uid="uid://b7phwbqk2mbo8" path="res://raw_assets/sprite/diamond.png" id="2_a5k0l"]
+[ext_resource type="Script" uid="uid://csebc5pq3b5lr" path="res://objects/player_stats/stat.gd" id="3_c5baq"]
+[ext_resource type="Script" uid="uid://bl1gi7l8bbxj7" path="res://objects/player_stats/stat_list.gd" id="4_werig"]
+
+[sub_resource type="Resource" id="Resource_bu5h7"]
+script = ExtResource("3_c5baq")
+_a = 0.5
+_type = 6
+metadata/_custom_type_script = "uid://csebc5pq3b5lr"
+
+[sub_resource type="Resource" id="Resource_vtabj"]
+script = ExtResource("3_c5baq")
+_a = 0.2
+_type = 4
+metadata/_custom_type_script = "uid://csebc5pq3b5lr"
+
+[sub_resource type="Resource" id="Resource_lxes1"]
+script = ExtResource("4_werig")
+list = Array[ExtResource("3_c5baq")]([SubResource("Resource_bu5h7"), SubResource("Resource_vtabj")])
+metadata/_custom_type_script = "uid://bl1gi7l8bbxj7"
+
+[resource]
+script = ExtResource("1_lbvpc")
+stats = SubResource("Resource_lxes1")
+sprite = ExtResource("2_a5k0l")
+name = "Diamond"
+description = "+ 0.5 Baiting
++ 0.2 harvesting"
+metadata/_custom_type_script = "uid://dq4mb3t21k0or"

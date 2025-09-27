@@ -7,8 +7,12 @@ class_name Item
 
 signal spawn_thing(thing : PackedScene)
 
+func on_main_gun_shoot():
+    pass
+
 func on_pick_up():
     pass
+
 func on_remove():
     pass
 

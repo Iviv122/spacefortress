@@ -11,7 +11,7 @@ signal levelup
 signal gained(amount : float,ToLevelUp : float)
 
 func _on_enemy_death():
-    AddExp(exp_per_kill  + 0.1 * PlayerInstance.stats.Get(Stats.StatType.Learnability))
+    AddExp(exp_per_kill*PlayerInstance.stats.Get(Stats.StatType.Learnability))
 
 func AddExp(amount:float):
     expirience += amount

@@ -15,6 +15,9 @@ var inventory : Inventory
 func on_start():
 		inventory.on_start()
 
+func _on_main_gun_shoot():
+	inventory.on_main_gun_shoot()
+
 func _on_enemy_death():
 	money._on_enemy_death()
 	expirience._on_enemy_death()

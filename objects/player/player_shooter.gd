@@ -20,6 +20,7 @@ func shoot() -> void:
 	var i: Bullet = bullet.instantiate()
 	i.SetDir(dir)
 	i.global_position = dir * shoot_offset + global_position
+	PlayerInstance._on_main_gun_shoot()
 	get_parent().add_child(i)
 
 func _process(delta):

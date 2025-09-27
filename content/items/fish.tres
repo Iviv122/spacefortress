@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ItemStatsAdd" load_steps=7 format=3 uid="uid://dcei3pbsnqwk8"]
+
+[ext_resource type="Script" uid="uid://dq4mb3t21k0or" path="res://objects/items/simple_items/item_stats_add.gd" id="1_l0cvp"]
+[ext_resource type="Texture2D" uid="uid://cypbt05a66khh" path="res://raw_assets/sprite/fish.png" id="2_wvaci"]
+[ext_resource type="Script" uid="uid://csebc5pq3b5lr" path="res://objects/player_stats/stat.gd" id="3_thwoq"]
+[ext_resource type="Script" uid="uid://bl1gi7l8bbxj7" path="res://objects/player_stats/stat_list.gd" id="4_c7x7l"]
+
+[sub_resource type="Resource" id="Resource_ydghn"]
+script = ExtResource("3_thwoq")
+_a = 1.0
+metadata/_custom_type_script = "uid://csebc5pq3b5lr"
+
+[sub_resource type="Resource" id="Resource_rfenm"]
+script = ExtResource("4_c7x7l")
+list = Array[ExtResource("3_thwoq")]([SubResource("Resource_ydghn")])
+metadata/_custom_type_script = "uid://bl1gi7l8bbxj7"
+
+[resource]
+script = ExtResource("1_l0cvp")
+stats = SubResource("Resource_rfenm")
+sprite = ExtResource("2_wvaci")
+name = "Fish head"
+description = "+1 max health"
+metadata/_custom_type_script = "uid://dq4mb3t21k0or"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SideGuns" load_steps=4 format=3 uid="uid://tgdjfuafxj6c"]
+
+[ext_resource type="PackedScene" uid="uid://cqvttdmftvvst" path="res://prefabs/projectiles/directed_bullet.tscn" id="1_dgak6"]
+[ext_resource type="Script" uid="uid://dpcgguh3eqnvu" path="res://objects/items/side_guns/side_guns.gd" id="1_uv64e"]
+[ext_resource type="Texture2D" uid="uid://c8qyffbpcgg2m" path="res://raw_assets/sprite/side_guns.png" id="3_wbmvf"]
+
+[resource]
+script = ExtResource("1_uv64e")
+directed_bullet = ExtResource("1_dgak6")
+sprite = ExtResource("3_wbmvf")
+name = "Side guns"
+description = "Every 5 main gun shot:
+Shoot bullet in random direction"
+metadata/_custom_type_script = "uid://dpcgguh3eqnvu"

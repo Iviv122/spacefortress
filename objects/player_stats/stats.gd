@@ -11,23 +11,23 @@ func Mult(s: Stats) -> void:
 	for i in StatType:
 		stats[iterator] *= s.stats[iterator]
 		iterator += 1
-	change.emit()
+		change.emit()
 
 func Add(s: Stats) -> void:
 	var iterator = 0
 	for i in StatType:
 		stats[iterator] += s.stats[iterator]
 		iterator += 1
-	change.emit()
+		change.emit()
 
 func Apply(s: Array[Stat]) -> void:
 	for i in s:
 		AddStat(i)
-	change.emit()
+		change.emit()
 func ApplyMultyplication(s: Array[Stat]) -> void:
 	for i in s:
 		MultiplyStat(i)
-	change.emit()
+		change.emit()
 
 
 
@@ -69,9 +69,9 @@ static func Description(t: StatType) -> String:
 		StatType.ReloadSpeed:
 			return "How many shots per second you are able to do"
 		StatType.Harvesting:
-			return "+10% of pacs from every source per skill amount"
+			return "Pacs gain multiplier"
 		StatType.Learnability:
-			return "+10% of expirience from every source per skill amount"
+			return "Expirience gain multiplier"
 		StatType.Baiting:
 			return "Enemy spawn rate multiplier"
 		_:

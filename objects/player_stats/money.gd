@@ -5,7 +5,7 @@ signal changed(c : float)
 var _current_money: float = 0.0
 
 func _on_enemy_death():
-	current_money += 1 + PlayerInstance.stats.Get(Stats.StatType.Harvesting)*0.1 
+	current_money += 1*PlayerInstance.stats.Get(Stats.StatType.Harvesting)
 
 var current_money: float:
 	get:

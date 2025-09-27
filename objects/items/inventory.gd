@@ -18,6 +18,10 @@ func remove(index : int):
 func spawn(thing : PackedScene):
 	spawn_thing.emit(thing)
 
+func on_main_gun_shoot():
+	for i in items:
+		i.on_enemy_death()
+
 func on_enemy_death():
 	for i in items:
 		i.on_enemy_death()

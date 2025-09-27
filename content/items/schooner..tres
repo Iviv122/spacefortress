@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="ItemStatsAdd" load_steps=8 format=3 uid="uid://lfu5qdmiw1wm"]
+
+[ext_resource type="Script" uid="uid://dq4mb3t21k0or" path="res://objects/items/simple_items/item_stats_add.gd" id="1_b0k67"]
+[ext_resource type="Script" uid="uid://csebc5pq3b5lr" path="res://objects/player_stats/stat.gd" id="2_5u7lf"]
+[ext_resource type="Texture2D" uid="uid://dbnq0w474xsbx" path="res://raw_assets/sprite/schooner.png" id="2_qnhlx"]
+[ext_resource type="Script" uid="uid://dib6xud1qb3wh" path="res://objects/player_stats/random_stat.gd" id="3_qnhlx"]
+[ext_resource type="Script" uid="uid://bl1gi7l8bbxj7" path="res://objects/player_stats/stat_list.gd" id="4_4ttmr"]
+
+[sub_resource type="Resource" id="Resource_socl6"]
+script = ExtResource("3_qnhlx")
+allowed_types = Array[int]([2, 5, 4])
+_a = 0.2
+metadata/_custom_type_script = "uid://dib6xud1qb3wh"
+
+[sub_resource type="Resource" id="Resource_wolj7"]
+script = ExtResource("4_4ttmr")
+list = Array[ExtResource("2_5u7lf")]([SubResource("Resource_socl6")])
+metadata/_custom_type_script = "uid://bl1gi7l8bbxj7"
+
+[resource]
+script = ExtResource("1_b0k67")
+stats = SubResource("Resource_wolj7")
+sprite = ExtResource("2_qnhlx")
+name = "Schooner"
+description = "Gives +0.2 to one from following :
+ Crit Chance, Learnability, Harvesting"
+metadata/_custom_type_script = "uid://dq4mb3t21k0or"

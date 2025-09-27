@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://betdsgah0dhab"]
+[gd_scene load_steps=11 format=3 uid="uid://betdsgah0dhab"]
 
 [ext_resource type="Script" uid="uid://lm172k3seq4w" path="res://objects/player/player.gd" id="1_q8a7i"]
 [ext_resource type="Script" uid="uid://dwgp13gs07gpg" path="res://objects/player_stats/stats.gd" id="2_gx4cu"]
@@ -31,8 +31,20 @@ _a = 1.0
 _type = 6
 metadata/_custom_type_script = "uid://csebc5pq3b5lr"
 
+[sub_resource type="Resource" id="Resource_ep3lb"]
+script = ExtResource("3_1462n")
+_a = 1.0
+_type = 5
+metadata/_custom_type_script = "uid://csebc5pq3b5lr"
+
+[sub_resource type="Resource" id="Resource_vte74"]
+script = ExtResource("3_1462n")
+_a = 1.0
+_type = 4
+metadata/_custom_type_script = "uid://csebc5pq3b5lr"
+
 [node name="PlayerInstance" type="Node"]
 script = ExtResource("1_q8a7i")
 stats = SubResource("Resource_1462n")
-start_stats = Array[ExtResource("3_1462n")]([SubResource("Resource_ojwj6"), SubResource("Resource_3gw41"), SubResource("Resource_i6ne5"), SubResource("Resource_44y2b")])
+start_stats = Array[ExtResource("3_1462n")]([SubResource("Resource_ojwj6"), SubResource("Resource_3gw41"), SubResource("Resource_i6ne5"), SubResource("Resource_44y2b"), SubResource("Resource_ep3lb"), SubResource("Resource_vte74")])
 metadata/_custom_type_script = "uid://lm172k3seq4w"
