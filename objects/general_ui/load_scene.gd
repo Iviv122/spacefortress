@@ -3,5 +3,8 @@ class_name LoadScene
 
 @export var scene : PackedScene
 
-func _pressed() -> void:
+func load_scene() -> void:
 	get_tree().call_group("load_scene","load_scene",scene)
+
+func _pressed() -> void:
+	load_scene()

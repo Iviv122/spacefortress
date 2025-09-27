@@ -1,0 +1,132 @@
+[gd_scene load_steps=18 format=3 uid="uid://bssr6lkahus37"]
+
+[ext_resource type="Shader" uid="uid://2tplgl5hxkcc" path="res://shaders/background_grid.gdshader" id="1_akxfj"]
+[ext_resource type="Script" uid="uid://djl5bv1ndm5mk" path="res://objects/general_ui/character_select.gd" id="2_fxf00"]
+[ext_resource type="Texture2D" uid="uid://pvm5l067583a" path="res://raw_assets/sprite/markofsacrifice.png" id="2_n7ifp"]
+[ext_resource type="Script" uid="uid://df5rn0q2eugkb" path="res://objects/items/item.gd" id="4_5dqrv"]
+[ext_resource type="Texture2D" uid="uid://b6b13vyu1pr3y" path="res://raw_assets/sprite/pilon.png" id="4_nk33d"]
+[ext_resource type="Resource" uid="uid://rlapgjs46cxu" path="res://content/items/mark_of_madness.tres" id="5_d1yaq"]
+[ext_resource type="Texture2D" uid="uid://c8n6kw7kn7rqf" path="res://raw_assets/sprite/circle.png" id="5_l485o"]
+[ext_resource type="Resource" uid="uid://dfedkurajn78r" path="res://content/items/mark_of_sacrifice.tres" id="6_ywhu2"]
+[ext_resource type="Script" uid="uid://dy4y6yf2brlx8" path="res://objects/items/item_list.gd" id="7_61dkl"]
+[ext_resource type="PackedScene" uid="uid://captxp72wnpal" path="res://prefabs/scenes/in_fight.tscn" id="8_7dy4e"]
+[ext_resource type="Resource" uid="uid://uoomdluu1mo8" path="res://content/items/pilon_turret.res" id="10_d1yaq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fxf00"]
+shader = ExtResource("1_akxfj")
+shader_parameter/color = Color(0, 0.43137255, 0, 0.4509804)
+shader_parameter/size = Vector2(4000, 4000)
+shader_parameter/line_width = 0.1
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/grid_size = 64.0
+shader_parameter/speed = 15.0
+
+[sub_resource type="Gradient" id="Gradient_iqq7q"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n7ifp"]
+gradient = SubResource("Gradient_iqq7q")
+width = 4000
+height = 4000
+
+[sub_resource type="Resource" id="Resource_ox7o5"]
+script = ExtResource("7_61dkl")
+list = Array[ExtResource("4_5dqrv")]([ExtResource("5_d1yaq"), ExtResource("6_ywhu2")])
+metadata/_custom_type_script = "uid://dy4y6yf2brlx8"
+
+[sub_resource type="Resource" id="Resource_ywhu2"]
+script = ExtResource("7_61dkl")
+list = Array[ExtResource("4_5dqrv")]([ExtResource("10_d1yaq")])
+metadata/_custom_type_script = "uid://dy4y6yf2brlx8"
+
+[sub_resource type="Resource" id="Resource_d1yaq"]
+script = ExtResource("7_61dkl")
+metadata/_custom_type_script = "uid://dy4y6yf2brlx8"
+
+[node name="CharacterSelect" type="Node2D"]
+
+[node name="backgroundMajor" type="Sprite2D" parent="."]
+z_index = -5
+material = SubResource("ShaderMaterial_fxf00")
+texture = SubResource("GradientTexture2D_n7ifp")
+
+[node name="backgroundMinor" type="Sprite2D" parent="."]
+z_index = -5
+material = SubResource("ShaderMaterial_fxf00")
+rotation = 2.5150194
+scale = Vector2(1.7, 1.7)
+texture = SubResource("GradientTexture2D_n7ifp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -596.0
+offset_right = -556.0
+offset_bottom = 16.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -36.0
+offset_right = 252.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="CharacterSelect" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+text = "Berserk
+ 
+
+ 
+Has only half of health
+Double damage
+Double attack speed
+Triple enemies"
+icon = ExtResource("2_n7ifp")
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("2_fxf00")
+item_list = SubResource("Resource_ox7o5")
+scene = ExtResource("8_7dy4e")
+metadata/_custom_type_script = "uid://djl5bv1ndm5mk"
+
+[node name="CharacterSelect2" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+text = "Engineer
+ 
+
+ 
+Has Additional turret from start"
+icon = ExtResource("4_nk33d")
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("2_fxf00")
+item_list = SubResource("Resource_ywhu2")
+scene = ExtResource("8_7dy4e")
+metadata/_custom_type_script = "uid://djl5bv1ndm5mk"
+
+[node name="CharacterSelect3" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+text = "Hollow warrior
+ 
+
+ 
+Has nothing from start"
+icon = ExtResource("5_l485o")
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("2_fxf00")
+item_list = SubResource("Resource_d1yaq")
+scene = ExtResource("8_7dy4e")
+metadata/_custom_type_script = "uid://djl5bv1ndm5mk"

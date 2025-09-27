@@ -1,11 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://betdsgah0dhab"]
+[gd_scene load_steps=9 format=3 uid="uid://betdsgah0dhab"]
 
 [ext_resource type="Script" uid="uid://lm172k3seq4w" path="res://objects/player/player.gd" id="1_q8a7i"]
 [ext_resource type="Script" uid="uid://dwgp13gs07gpg" path="res://objects/player_stats/stats.gd" id="2_gx4cu"]
 [ext_resource type="Script" uid="uid://csebc5pq3b5lr" path="res://objects/player_stats/stat.gd" id="3_1462n"]
-[ext_resource type="Script" uid="uid://df5rn0q2eugkb" path="res://objects/items/item.gd" id="4_3gw41"]
-[ext_resource type="Resource" uid="uid://rlapgjs46cxu" path="res://content/items/mark_of_madness.tres" id="5_i6ne5"]
-[ext_resource type="Resource" uid="uid://dfedkurajn78r" path="res://content/items/mark_of_sacrifice.tres" id="6_i6ne5"]
 
 [sub_resource type="Resource" id="Resource_1462n"]
 script = ExtResource("2_gx4cu")
@@ -38,5 +35,4 @@ metadata/_custom_type_script = "uid://csebc5pq3b5lr"
 script = ExtResource("1_q8a7i")
 stats = SubResource("Resource_1462n")
 start_stats = Array[ExtResource("3_1462n")]([SubResource("Resource_ojwj6"), SubResource("Resource_3gw41"), SubResource("Resource_i6ne5"), SubResource("Resource_44y2b")])
-start_items = Array[ExtResource("4_3gw41")]([ExtResource("5_i6ne5"), ExtResource("6_i6ne5")])
 metadata/_custom_type_script = "uid://lm172k3seq4w"

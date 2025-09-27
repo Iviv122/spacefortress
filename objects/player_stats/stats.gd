@@ -76,8 +76,6 @@ static func Description(t: StatType) -> String:
 			return "Enemy spawn rate multiplier"
 		_:
 			return "Unknown"
-	
-
 
 static func Name(t: StatType) -> String:
 	match t:
