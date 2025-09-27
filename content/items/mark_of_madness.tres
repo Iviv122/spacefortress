@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="ItemStatsMultiply" load_steps=8 format=3 uid="uid://rlapgjs46cxu"]
+
+[ext_resource type="Script" uid="uid://rig56r1trtlt" path="res://objects/items/simple_items/item_stats_multiply.gd" id="1_adras"]
+[ext_resource type="Texture2D" uid="uid://crx5skrr03ovw" path="res://raw_assets/sprite/mark_of_madness.png" id="2_vcakp"]
+[ext_resource type="Script" uid="uid://csebc5pq3b5lr" path="res://objects/player_stats/stat.gd" id="3_vlmi3"]
+[ext_resource type="Script" uid="uid://bl1gi7l8bbxj7" path="res://objects/player_stats/stat_list.gd" id="4_sue2d"]
+
+[sub_resource type="Resource" id="Resource_vdvrr"]
+script = ExtResource("3_vlmi3")
+_a = 0.5
+metadata/_custom_type_script = "uid://csebc5pq3b5lr"
+
+[sub_resource type="Resource" id="Resource_lr0ui"]
+script = ExtResource("3_vlmi3")
+_a = 2.0
+_type = 3
+metadata/_custom_type_script = "uid://csebc5pq3b5lr"
+
+[sub_resource type="Resource" id="Resource_ocm3q"]
+script = ExtResource("4_sue2d")
+list = Array[ExtResource("3_vlmi3")]([SubResource("Resource_vdvrr"), SubResource("Resource_lr0ui")])
+metadata/_custom_type_script = "uid://bl1gi7l8bbxj7"
+
+[resource]
+script = ExtResource("1_adras")
+stats = SubResource("Resource_ocm3q")
+sprite = ExtResource("2_vcakp")
+name = "Mark of madness"
+description = "Halfes your health
+Dobles your attack speed"
+metadata/_custom_type_script = "uid://rig56r1trtlt"

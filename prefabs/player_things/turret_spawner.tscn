@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://uqlfdyl8q3wk"]
+
+[ext_resource type="Script" uid="uid://bg6gs3pthgmkb" path="res://objects/player/turret_spawner.gd" id="1_nyp7g"]
+
+[node name="TurretSpawner" type="Node"]
+script = ExtResource("1_nyp7g")
+metadata/_custom_type_script = "uid://bg6gs3pthgmkb"

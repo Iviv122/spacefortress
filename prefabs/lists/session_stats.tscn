@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://gkudysbcwnas"]
-
-[ext_resource type="Script" uid="uid://c2lcdbkbyqa64" path="res://objects/gameplay/player/stats/session_stats.gd" id="1_ovhin"]
-
-[node name="SessionStats" type="Node"]
-script = ExtResource("1_ovhin")
-metadata/_custom_type_script = "uid://c2lcdbkbyqa64"

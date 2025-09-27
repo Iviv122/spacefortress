@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccpa6myb755sk"]
+
+[ext_resource type="Script" uid="uid://cdonakx3smgn2" path="res://objects/items/pilon/pilon_turret.gd" id="1_r4xkq"]
+[ext_resource type="PackedScene" uid="uid://gb8kfa3thigv" path="res://prefabs/projectiles/half_bullet.tscn" id="2_8gbco"]
+[ext_resource type="Texture2D" uid="uid://yfdkcyo8kgqr" path="res://raw_assets/sprite/rombus.png" id="3_8gbco"]
+[ext_resource type="Script" uid="uid://bdok2fg4iw1de" path="res://objects/misc/sprite_rotate.gd" id="4_k3yi7"]
+
+[node name="PilonTurret" type="Node2D"]
+script = ExtResource("1_r4xkq")
+bullet = ExtResource("2_8gbco")
+metadata/_custom_type_script = "uid://cdonakx3smgn2"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_8gbco")
+script = ExtResource("4_k3yi7")
+speed = -38.0
+metadata/_custom_type_script = "uid://bdok2fg4iw1de"

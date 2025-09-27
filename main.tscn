@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://1ix80e7r62y6"]
+
+[ext_resource type="Script" uid="uid://bdom4cqj7ym35" path="res://objects/game/game_manager.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cfxjn3k8k2qse" path="res://prefabs/menus/start_game.tscn" id="2_0xm2m"]
+
+[node name="fightscene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_ig7tw")
+StartScene = ExtResource("2_0xm2m")
+metadata/_custom_type_script = "uid://bdom4cqj7ym35"

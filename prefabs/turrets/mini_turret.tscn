@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk3hfnawx54tm"]
+
+[ext_resource type="Script" uid="uid://cfx1h7x6bcqtc" path="res://objects/items/mini_turrets/miniturret_turret.gd" id="1_p877h"]
+[ext_resource type="Texture2D" uid="uid://d2po2hh0owyrk" path="res://raw_assets/sprite/mini_turret.png" id="2_gigqd"]
+[ext_resource type="PackedScene" uid="uid://dnrycbygow00g" path="res://prefabs/projectiles/quater_bullet.tscn" id="2_jhci5"]
+
+[node name="MiniTurret" type="Node2D"]
+script = ExtResource("1_p877h")
+bullet = ExtResource("2_jhci5")
+rotate_speed = 30.0
+metadata/_custom_type_script = "uid://cfx1h7x6bcqtc"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gigqd")

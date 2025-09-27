@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckhj2naomgfoh"]
+
+[ext_resource type="Script" uid="uid://bx2tfpmm7s452" path="res://objects/player/player_shooter.gd" id="1_nk0sf"]
+[ext_resource type="PackedScene" uid="uid://b5x1jnkb03kdk" path="res://prefabs/projectiles/bullet.tscn" id="2_70ghr"]
+[ext_resource type="Texture2D" uid="uid://16lpdflxhiop" path="res://raw_assets/sprite/filled_triangle.png" id="3_70ghr"]
+
+[node name="shooter" type="Node2D"]
+script = ExtResource("1_nk0sf")
+bullet = ExtResource("2_70ghr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -55)
+scale = Vector2(0.5, 0.3)
+texture = ExtResource("3_70ghr")

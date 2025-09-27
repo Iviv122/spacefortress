@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://7fq12ggbwgea"]
+
+[ext_resource type="Script" uid="uid://clprfp1y5e07q" path="res://objects/enemy/enemy.gd" id="1_8hexq"]
+[ext_resource type="Texture2D" uid="uid://c31q2tlgk20lu" path="res://raw_assets/sprite/penthagon.png" id="2_8hexq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oj8a0"]
+radius = 34.655445
+
+[node name="ultra_slow" type="Area2D"]
+script = ExtResource("1_8hexq")
+speed = 0.5
+health = 10.0
+metadata/_custom_type_script = "uid://clprfp1y5e07q"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_8hexq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oj8a0")

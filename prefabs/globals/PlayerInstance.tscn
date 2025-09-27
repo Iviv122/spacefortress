@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://betdsgah0dhab"]
+
+[ext_resource type="Script" uid="uid://lm172k3seq4w" path="res://objects/player/player.gd" id="1_q8a7i"]
+[ext_resource type="Script" uid="uid://dwgp13gs07gpg" path="res://objects/player_stats/stats.gd" id="2_gx4cu"]
+[ext_resource type="Script" uid="uid://csebc5pq3b5lr" path="res://objects/player_stats/stat.gd" id="3_1462n"]
+
+[sub_resource type="Resource" id="Resource_1462n"]
+script = ExtResource("2_gx4cu")
+metadata/_custom_type_script = "uid://dwgp13gs07gpg"
+
+[sub_resource type="Resource" id="Resource_ojwj6"]
+script = ExtResource("3_1462n")
+_a = 3.0
+metadata/_custom_type_script = "uid://csebc5pq3b5lr"
+
+[sub_resource type="Resource" id="Resource_3gw41"]
+script = ExtResource("3_1462n")
+_a = 1.0
+_type = 1
+metadata/_custom_type_script = "uid://csebc5pq3b5lr"
+
+[sub_resource type="Resource" id="Resource_i6ne5"]
+script = ExtResource("3_1462n")
+_a = 3.0
+_type = 3
+metadata/_custom_type_script = "uid://csebc5pq3b5lr"
+
+[node name="PlayerInstance" type="Node"]
+script = ExtResource("1_q8a7i")
+stats = SubResource("Resource_1462n")
+start_stats = Array[ExtResource("3_1462n")]([SubResource("Resource_ojwj6"), SubResource("Resource_3gw41"), SubResource("Resource_i6ne5")])
+metadata/_custom_type_script = "uid://lm172k3seq4w"

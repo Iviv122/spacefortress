@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddaf56b6tujtl"]
+
+[ext_resource type="Script" uid="uid://cd7rj5c3n4m3f" path="res://objects/items/airstrike/air_strike.gd" id="1_8kjar"]
+[ext_resource type="Texture2D" uid="uid://f0qwm5v0arjj" path="res://raw_assets/sprite/air_strike_big.png" id="1_d7jvh"]
+
+[node name="Node2D" type="Sprite2D"]
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_d7jvh")
+script = ExtResource("1_8kjar")
+metadata/_custom_type_script = "uid://cd7rj5c3n4m3f"

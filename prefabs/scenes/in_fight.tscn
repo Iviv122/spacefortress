@@ -1,0 +1,44 @@
+[gd_scene load_steps=11 format=3 uid="uid://captxp72wnpal"]
+
+[ext_resource type="Script" uid="uid://chxb0ltxt7jcb" path="res://objects/game/fight_entry_point.gd" id="1_r56t2"]
+[ext_resource type="PackedScene" uid="uid://d0a1vwr71j61n" path="res://prefabs/player_things/player_body.tscn" id="2_12pgg"]
+[ext_resource type="PackedScene" uid="uid://ckhj2naomgfoh" path="res://prefabs/player_things/player_shooter.tscn" id="3_nvskj"]
+[ext_resource type="PackedScene" uid="uid://fw4huedw7cqm" path="res://prefabs/enemies/spawner.tscn" id="4_s5sky"]
+[ext_resource type="PackedScene" uid="uid://da8csn0st4snv" path="res://prefabs/menus/in_fight_ui.tscn" id="5_kn4wn"]
+[ext_resource type="PackedScene" uid="uid://uqlfdyl8q3wk" path="res://prefabs/player_things/turret_spawner.tscn" id="6_12pgg"]
+[ext_resource type="Shader" uid="uid://2tplgl5hxkcc" path="res://shaders/background_grid.gdshader" id="6_yvc8c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d0tpm"]
+shader = ExtResource("6_yvc8c")
+shader_parameter/color = Color(0, 0.43137255, 0, 0.4509804)
+shader_parameter/size = Vector2(4000, 4000)
+shader_parameter/line_width = 0.1
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/grid_size = 64.0
+shader_parameter/speed = 15.0
+
+[sub_resource type="Gradient" id="Gradient_iqq7q"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hjecn"]
+gradient = SubResource("Gradient_iqq7q")
+width = 4000
+height = 4000
+
+[node name="Fight" type="Node2D"]
+script = ExtResource("1_r56t2")
+to_spawn = Array[PackedScene]([ExtResource("2_12pgg"), ExtResource("3_nvskj"), ExtResource("4_s5sky"), ExtResource("5_kn4wn"), ExtResource("6_12pgg")])
+metadata/_custom_type_script = "uid://chxb0ltxt7jcb"
+
+[node name="backgroundMajor" type="Sprite2D" parent="."]
+z_index = -5
+material = SubResource("ShaderMaterial_d0tpm")
+texture = SubResource("GradientTexture2D_hjecn")
+
+[node name="backgroundMinor" type="Sprite2D" parent="."]
+z_index = -5
+material = SubResource("ShaderMaterial_d0tpm")
+rotation = 2.5150194
+scale = Vector2(1.7, 1.7)
+texture = SubResource("GradientTexture2D_hjecn")

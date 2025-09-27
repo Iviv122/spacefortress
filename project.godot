@@ -10,24 +10,17 @@ config_version=5
 
 [application]
 
-config/name="SpaceFortress"
-run/main_scene="uid://b2cpj44xd3dgf"
+config/name="spacefortress"
+run/main_scene="uid://1ix80e7r62y6"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
-PlayerStatsInstance="*res://prefabs/lists/player.tscn"
-LvlUpBuffs="*res://prefabs/lists/lvl_up_buffs.tscn"
-SessionStatsInstance="*res://prefabs/lists/session_stats.tscn"
-ItemListInstance="*res://prefabs/lists/item_pool.tscn"
+PlayerInstance="*res://prefabs/globals/PlayerInstance.tscn"
 
 [display]
 
-window/size/viewport_width=600
-window/size/viewport_height=600
-window/size/window_width_override=600
-window/size/window_height_override=600
+window/size/viewport_height=700
 
 [editor_plugins]
 
@@ -35,32 +28,18 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [global_group]
 
-enemy_death=""
-stage_end=""
-game_over=""
-next_shopping_step=""
-player_got_damage=""
-item_bought=""
+load_scene=""
+next_step=""
 reroll=""
 
 [gui]
 
-theme/custom_font="uid://dxle2yh3pvkyg"
-
-[input]
-
-shoot={
-"deadzone": 0.2,
-"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
-, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":4,"canceled":false,"pressed":false,"double_click":false,"script":null)
-]
-}
+theme/custom_font="uid://brhxldnsxf07c"
 
 [rendering]
 
-occlusion_culling/bvh_build_quality=0
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-anti_aliasing/screen_space_roughness_limiter/enabled=false
+environment/volumetric_fog/use_filter=0
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
