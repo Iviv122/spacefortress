@@ -1,21 +1,21 @@
 extends Node2D
 class_name Spawner
 
-@export var e : Array[PackedScene]
-@export var speed : float
+@export var wave_composition : WaveComposition 
 @export var radius : float 
+
+var wave : Wave
 
 var current_reload
 var queue : Array[PackedScene]
 var index = 0
 
 func _ready():
-	if PlayerInstance.misc_stats.wave_count != 1:
-		speed *= PlayerInstance.misc_stats.wave_count+PlayerInstance.misc_stats.wave_count
-	else:
-		speed = 1
-	queue  = e.duplicate()
+
+	wave = wave_composition.waves[PlayerInstance.misc_stats.wave_count] 
+	queue  = wave.enemy_kinds.duplicate()
 	queue.shuffle()
+
 	current_reload = 1
 
 var initPos : Vector2 = Vector2(0,0)
@@ -33,7 +33,7 @@ func spawn():
 	add_child(i)
 
 func _process(delta):
-	current_reload -= delta*speed*PlayerInstance.stats.Get(Stats.StatType.Baiting)
+	current_reload -= delta*wave.spawn_multiplier*PlayerInstance.stats.Get(Stats.StatType.Baiting)
 	if current_reload <=0:
 		spawn()
 		current_reload = 1

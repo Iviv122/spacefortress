@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Wave" load_steps=4 format=3 uid="uid://dt7atkcemkk85"]
+
+[ext_resource type="PackedScene" uid="uid://bca7obljs80y0" path="res://prefabs/enemies/basic_enemy.tscn" id="1_r0wkp"]
+[ext_resource type="Script" uid="uid://bsb1dqblfldjl" path="res://objects/enemy/wave.gd" id="2_0ybj4"]
+[ext_resource type="PackedScene" uid="uid://bdjohm2n3jr7d" path="res://prefabs/enemies/fast_enemy.tscn" id="2_gb2w2"]
+
+[resource]
+script = ExtResource("2_0ybj4")
+enemy_kinds = Array[PackedScene]([ExtResource("1_r0wkp"), ExtResource("2_gb2w2")])
+spawn_multiplier = 2.5

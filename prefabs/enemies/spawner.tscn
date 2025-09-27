@@ -1,14 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://fw4huedw7cqm"]
+[gd_scene load_steps=3 format=3 uid="uid://fw4huedw7cqm"]
 
 [ext_resource type="Script" uid="uid://b8e1buskt1ibv" path="res://objects/enemy/spawner.gd" id="1_e8nlb"]
-[ext_resource type="PackedScene" uid="uid://bca7obljs80y0" path="res://prefabs/enemies/basic_enemy.tscn" id="2_krj31"]
-[ext_resource type="PackedScene" uid="uid://bdjohm2n3jr7d" path="res://prefabs/enemies/fast_enemy.tscn" id="3_i0lvk"]
-[ext_resource type="PackedScene" uid="uid://dajagx4v1ry7b" path="res://prefabs/enemies/slow_enemy.tscn" id="4_aqx5k"]
-[ext_resource type="PackedScene" uid="uid://7fq12ggbwgea" path="res://prefabs/enemies/ultra_slow_enemy.tscn" id="5_i0lvk"]
+[ext_resource type="Resource" uid="uid://d25i5wd37rvyc" path="res://content/wave_composition.tres" id="2_ajqkl"]
 
 [node name="Spawner" type="Node2D"]
 script = ExtResource("1_e8nlb")
-e = Array[PackedScene]([ExtResource("2_krj31"), ExtResource("3_i0lvk"), ExtResource("4_aqx5k"), ExtResource("5_i0lvk")])
-speed = 1.0
+wave_composition = ExtResource("2_ajqkl")
 radius = 8.0
 metadata/_custom_type_script = "uid://b8e1buskt1ibv"

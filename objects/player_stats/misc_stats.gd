@@ -2,7 +2,7 @@ class_name MiscStats
 
 signal update
 
-var wave_count : int = 1
+var wave_count : int = 0 
 var kills : int = 0
 var rerolls : int = 0 
 var item_bought : int = 0

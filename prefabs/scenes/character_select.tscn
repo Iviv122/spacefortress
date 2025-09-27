@@ -35,13 +35,13 @@ script = ExtResource("7_61dkl")
 list = Array[ExtResource("4_5dqrv")]([ExtResource("5_d1yaq"), ExtResource("6_ywhu2")])
 metadata/_custom_type_script = "uid://dy4y6yf2brlx8"
 
+[sub_resource type="Resource" id="Resource_d1yaq"]
+script = ExtResource("7_61dkl")
+metadata/_custom_type_script = "uid://dy4y6yf2brlx8"
+
 [sub_resource type="Resource" id="Resource_ywhu2"]
 script = ExtResource("7_61dkl")
 list = Array[ExtResource("4_5dqrv")]([ExtResource("10_d1yaq")])
-metadata/_custom_type_script = "uid://dy4y6yf2brlx8"
-
-[sub_resource type="Resource" id="Resource_d1yaq"]
-script = ExtResource("7_61dkl")
 metadata/_custom_type_script = "uid://dy4y6yf2brlx8"
 
 [node name="CharacterSelect" type="Node2D"]
@@ -106,23 +106,6 @@ item_list = SubResource("Resource_ox7o5")
 scene = ExtResource("8_7dy4e")
 metadata/_custom_type_script = "uid://djl5bv1ndm5mk"
 
-[node name="CharacterSelect2" type="Button" parent="CanvasLayer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Engineer 
- 
-
- 
-Has Additional turret from start"
-icon = ExtResource("4_nk33d")
-autowrap_mode = 3
-icon_alignment = 1
-vertical_icon_alignment = 0
-script = ExtResource("2_fxf00")
-item_list = SubResource("Resource_ywhu2")
-scene = ExtResource("8_7dy4e")
-metadata/_custom_type_script = "uid://djl5bv1ndm5mk"
-
 [node name="CharacterSelect3" type="Button" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -137,6 +120,23 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 script = ExtResource("2_fxf00")
 item_list = SubResource("Resource_d1yaq")
+scene = ExtResource("8_7dy4e")
+metadata/_custom_type_script = "uid://djl5bv1ndm5mk"
+
+[node name="CharacterSelect2" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Engineer 
+ 
+
+ 
+Has Additional turret from start"
+icon = ExtResource("4_nk33d")
+autowrap_mode = 3
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("2_fxf00")
+item_list = SubResource("Resource_ywhu2")
 scene = ExtResource("8_7dy4e")
 metadata/_custom_type_script = "uid://djl5bv1ndm5mk"
 
