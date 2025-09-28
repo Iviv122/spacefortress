@@ -4,4 +4,4 @@ class_name ContinueButton
 @export var mene : PauseMenu
 
 func _pressed() -> void:
-	mene.disappear()
+	get_parent().get_parent().get_parent().disappear()

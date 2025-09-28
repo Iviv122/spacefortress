@@ -1,12 +1,17 @@
-[gd_resource type="Resource" script_class="WaveComposition" load_steps=6 format=3 uid="uid://d25i5wd37rvyc"]
+[gd_resource type="Resource" script_class="WaveComposition" load_steps=11 format=3 uid="uid://d25i5wd37rvyc"]
 
 [ext_resource type="Script" uid="uid://bfufg15ohha3l" path="res://objects/enemy/wave_composition.gd" id="1_ngyki"]
 [ext_resource type="Script" uid="uid://bsb1dqblfldjl" path="res://objects/enemy/wave.gd" id="2_lckow"]
 [ext_resource type="Resource" uid="uid://bet68lvadg80k" path="res://content/waves/wave_1.tres" id="3_olqf8"]
 [ext_resource type="Resource" uid="uid://ki30j02yd57r" path="res://content/waves/wave_2.tres" id="4_8nmrv"]
 [ext_resource type="Resource" uid="uid://dt7atkcemkk85" path="res://content/waves/wave_3.tres" id="5_hfu2u"]
+[ext_resource type="Resource" uid="uid://cl3r3kerlxbsn" path="res://content/waves/wave_4.tres" id="6_8nmrv"]
+[ext_resource type="Resource" uid="uid://cov5s4dp2nbym" path="res://content/waves/wave_5.tres" id="7_p5ffs"]
+[ext_resource type="Resource" uid="uid://cuh0s3jkyjiyn" path="res://content/waves/wave_6.tres" id="8_gpmy8"]
+[ext_resource type="Resource" uid="uid://dt75bj5w0p1rq" path="res://content/waves/wave_7.tres" id="9_gpmy8"]
+[ext_resource type="Resource" uid="uid://bos402orofgr0" path="res://content/waves/wave_8.tres" id="10_rxax4"]
 
 [resource]
 script = ExtResource("1_ngyki")
-waves = Array[ExtResource("2_lckow")]([ExtResource("3_olqf8"), ExtResource("4_8nmrv"), ExtResource("5_hfu2u")])
+waves = Array[ExtResource("2_lckow")]([ExtResource("3_olqf8"), ExtResource("4_8nmrv"), ExtResource("5_hfu2u"), ExtResource("6_8nmrv"), ExtResource("7_p5ffs"), ExtResource("8_gpmy8"), ExtResource("9_gpmy8"), ExtResource("10_rxax4")])
 metadata/_custom_type_script = "uid://bfufg15ohha3l"

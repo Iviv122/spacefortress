@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Wave" load_steps=3 format=3 uid="uid://cl3r3kerlxbsn"]
+
+[ext_resource type="PackedScene" uid="uid://dajagx4v1ry7b" path="res://prefabs/enemies/slow_enemy.tscn" id="1_a88sv"]
+[ext_resource type="Script" uid="uid://bsb1dqblfldjl" path="res://objects/enemy/wave.gd" id="3_w2tue"]
+
+[resource]
+script = ExtResource("3_w2tue")
+enemy_kinds = Array[PackedScene]([ExtResource("1_a88sv")])
+spawn_multiplier = 6.0

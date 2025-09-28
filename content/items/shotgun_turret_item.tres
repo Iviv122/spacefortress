@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ShotgunTurretItem" load_steps=4 format=3 uid="uid://yuwnclnls4yh"]
+
+[ext_resource type="Script" uid="uid://dxgbobl7fivmb" path="res://objects/items/shotgun_turret/shotgun_turret_item.gd" id="1_4ubln"]
+[ext_resource type="PackedScene" uid="uid://b81rryp237pup" path="res://prefabs/turrets/shotgun_turret.tscn" id="2_eeaqr"]
+[ext_resource type="Texture2D" uid="uid://ku4q01h76nr1" path="res://raw_assets/sprite/shotgun_turret.png" id="2_via80"]
+
+[resource]
+script = ExtResource("1_4ubln")
+turret = ExtResource("2_eeaqr")
+sprite = ExtResource("2_via80")
+name = "Shotgun turret"
+description = "Shoots in player mouse direction
+Shoots 3 bullets in fan patter
+deals full player damage per bullet
+1/4 of player attack speed
+"
+metadata/_custom_type_script = "uid://dxgbobl7fivmb"

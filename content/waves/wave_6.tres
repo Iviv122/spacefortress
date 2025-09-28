@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Wave" load_steps=3 format=3 uid="uid://cuh0s3jkyjiyn"]
+
+[ext_resource type="PackedScene" uid="uid://dfwdav6ks48oy" path="res://prefabs/enemies/tank_enemy.tscn" id="1_1sp7l"]
+[ext_resource type="Script" uid="uid://bsb1dqblfldjl" path="res://objects/enemy/wave.gd" id="4_wb116"]
+
+[resource]
+script = ExtResource("4_wb116")
+enemy_kinds = Array[PackedScene]([ExtResource("1_1sp7l")])
+spawn_multiplier = 12.0

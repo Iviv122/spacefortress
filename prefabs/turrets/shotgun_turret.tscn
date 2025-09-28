@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://b81rryp237pup"]
+
+[ext_resource type="Script" uid="uid://dn4m8fdrpjthf" path="res://objects/items/shotgun_turret/shotgun_turret.gd" id="1_wwha5"]
+[ext_resource type="PackedScene" uid="uid://b5x1jnkb03kdk" path="res://prefabs/projectiles/bullet.tscn" id="2_wwha5"]
+[ext_resource type="Texture2D" uid="uid://ku4q01h76nr1" path="res://raw_assets/sprite/shotgun_turret.png" id="3_wwha5"]
+[ext_resource type="Script" uid="uid://bdok2fg4iw1de" path="res://objects/misc/sprite_rotate.gd" id="4_2rr0a"]
+
+[node name="ShotgunTurret" type="Node2D"]
+script = ExtResource("1_wwha5")
+bullet = ExtResource("2_wwha5")
+metadata/_custom_type_script = "uid://dn4m8fdrpjthf"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_wwha5")
+script = ExtResource("4_2rr0a")
+speed = 64.0
+metadata/_custom_type_script = "uid://bdok2fg4iw1de"

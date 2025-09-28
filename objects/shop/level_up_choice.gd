@@ -12,7 +12,14 @@ var rare = ((0 * (PlayerInstance.misc_stats.wave_count - 0 - 2)) + 0)
 var epic = ((0 * (PlayerInstance.misc_stats.wave_count - 0 - 4)) + 0)
 var legendary = ((0 * (PlayerInstance.misc_stats.wave_count - 0 - 8)) + 0)
 
+func recalc() ->void:
+	basic = ((0 * (PlayerInstance.misc_stats.wave_count - 0 - 1)) + 100) 
+	rare = ((0 * (PlayerInstance.misc_stats.wave_count - 0 - 2)) + 0)
+	epic = ((0 * (PlayerInstance.misc_stats.wave_count - 0 - 4)) + 0)
+	legendary = ((0 * (PlayerInstance.misc_stats.wave_count - 0 - 8)) + 0)
+
 func get_random_rarity() -> Rarity:
+	recalc()
 	var roll = randf() * 100.0
 
 	if roll < legendary:

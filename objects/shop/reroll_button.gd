@@ -8,7 +8,7 @@ func update()->void:
 
 func _ready():
 	update()
-	tooltip_text = "update choices for payment"
+	tooltip_text = "restock choices for payment"
 
 func _pressed() -> void:
 	
