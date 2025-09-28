@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqfhsardkx6ks"]
+[gd_scene load_steps=8 format=3 uid="uid://dqfhsardkx6ks"]
 
+[ext_resource type="Script" uid="uid://skd2n2uacb1o" path="res://objects/misc/load_music.gd" id="1_4is2t"]
 [ext_resource type="PackedScene" uid="uid://bl1ul621fkvxw" path="res://prefabs/dialogs/simple_log.tscn" id="1_24b02"]
+[ext_resource type="AudioStream" uid="uid://xjf7ve2l3fbm" path="res://raw_assets/music/GettinSillyWithIt.wav" id="2_3yto5"]
 [ext_resource type="Script" uid="uid://dgh7etab82akc" path="res://objects/dialogs/fisrt_dialog.gd" id="2_lkqdk"]
 [ext_resource type="Texture2D" uid="uid://bw50doxu7clpx" path="res://raw_assets/sprite/blacksquare.png" id="3_6rtdh"]
 [ext_resource type="Script" uid="uid://dhfcoqvww3sb0" path="res://objects/dialogs/translation_square.gd" id="3_xb14j"]
 [ext_resource type="PackedScene" uid="uid://cqytdg6s0i5uj" path="res://prefabs/dialogs/second_dialog.tscn" id="5_l6h0d"]
 
 [node name="First" type="CanvasLayer"]
+script = ExtResource("1_4is2t")
+music = Array[AudioStream]([ExtResource("2_3yto5")])
 
 [node name="DialogueEngineDemoVBoxContainer" parent="." instance=ExtResource("1_24b02")]
 dialogue_gdscript = ExtResource("2_lkqdk")

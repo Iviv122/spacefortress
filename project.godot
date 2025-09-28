@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.5", "GL Compatibility")
 [autoload]
 
 PlayerInstance="*res://prefabs/globals/PlayerInstance.tscn"
+SoundManagerInstance="*res://prefabs/globals/music_manager.tscn"
 
 [display]
 
@@ -31,6 +32,8 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg", "res:/
 load_scene=""
 next_step=""
 reroll=""
+load_music=""
+load_sound=""
 
 [gui]
 

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://f88tipi4jbeq"]
+
+[ext_resource type="Script" uid="uid://ce8a38625gi6b" path="res://objects/settings/music_manager.gd" id="1_2kmtl"]
+[ext_resource type="AudioStream" uid="uid://q76voub7t5ki" path="res://raw_assets/music/HypnoticSynthLoop.wav" id="2_vuii7"]
+
+[node name="MusicManager" type="Node"]
+script = ExtResource("1_2kmtl")
+start_audio = ExtResource("2_vuii7")
+metadata/_custom_type_script = "uid://ce8a38625gi6b"

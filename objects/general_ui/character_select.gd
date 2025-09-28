@@ -4,6 +4,7 @@ class_name CharacterSelect
 @export var item_list : ItemsList 
 
 func _ready():
+
 	Engine.time_scale = 1
 
 func _pressed() -> void:

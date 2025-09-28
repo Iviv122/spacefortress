@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bp7dhy2no7krm"]
+[gd_scene load_steps=4 format=3 uid="uid://bp7dhy2no7krm"]
 
 [ext_resource type="Script" uid="uid://bsfc16fs7yxo6" path="res://objects/settings/settings_panel.gd" id="1_0okab"]
 [ext_resource type="Script" uid="uid://hbk5buo67k30" path="res://objects/settings/return.gd" id="2_bx1fw"]
+[ext_resource type="Script" uid="uid://b0akmwxwvosky" path="res://objects/settings/music_volume_slider.gd" id="2_w12oe"]
 
 [node name="SettingsPanel" type="Panel"]
 anchors_preset = 15
@@ -14,35 +15,24 @@ scene = "res://prefabs/scenes/main.tscn"
 pause_menu_panel = "res://prefabs/menus/pause_menu_panel.tscn"
 metadata/_custom_type_script = "uid://bsfc16fs7yxo6"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="settings_them_selves" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 100.0
+offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="settings_them_selves"]
 layout_mode = 2
-text = "asdasd"
+text = "Music volume"
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="MusicVolumeSlider" type="HSlider" parent="settings_them_selves"]
 layout_mode = 2
-text = "asdasd"
-
-[node name="Button3" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "asdasd"
-
-[node name="Button4" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "asdasd"
+script = ExtResource("2_w12oe")
+metadata/_custom_type_script = "uid://b0akmwxwvosky"
 
 [node name="Button" type="Button" parent="." node_paths=PackedStringArray("panel")]
 layout_mode = 1

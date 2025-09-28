@@ -1,6 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://bssr6lkahus37"]
+[gd_scene load_steps=20 format=3 uid="uid://bssr6lkahus37"]
 
+[ext_resource type="Script" uid="uid://skd2n2uacb1o" path="res://objects/misc/load_music.gd" id="1_61dkl"]
 [ext_resource type="Shader" uid="uid://2tplgl5hxkcc" path="res://shaders/background_grid.gdshader" id="1_akxfj"]
+[ext_resource type="AudioStream" uid="uid://q76voub7t5ki" path="res://raw_assets/music/HypnoticSynthLoop.wav" id="2_7dy4e"]
 [ext_resource type="Script" uid="uid://djl5bv1ndm5mk" path="res://objects/general_ui/character_select.gd" id="2_fxf00"]
 [ext_resource type="Texture2D" uid="uid://pvm5l067583a" path="res://raw_assets/sprite/markofsacrifice.png" id="2_n7ifp"]
 [ext_resource type="Script" uid="uid://df5rn0q2eugkb" path="res://objects/items/item.gd" id="4_5dqrv"]
@@ -45,6 +47,8 @@ list = Array[ExtResource("4_5dqrv")]([ExtResource("10_d1yaq")])
 metadata/_custom_type_script = "uid://dy4y6yf2brlx8"
 
 [node name="CharacterSelect" type="Node2D"]
+script = ExtResource("1_61dkl")
+music = Array[AudioStream]([ExtResource("2_7dy4e")])
 
 [node name="backgroundMajor" type="Sprite2D" parent="."]
 z_index = -5
