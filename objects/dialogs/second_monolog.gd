@@ -6,7 +6,7 @@ func _setup() -> void:
 	add_text_entry("[i][b]Unimaginable[/b] meatgrinder waits for you![/i]").set_metadata("name", "")
 	add_text_entry("[i]You are going to withstand against [b]hordes[/b] of enemies.[/i]").set_metadata("name", "")
 	add_text_entry("[i]Many will come to try to crush you![/i]").set_metadata("name", "")
-	add_text_entry("[i]But you will stand proudly through [rainbow freq=1.0 sat=0.4 val=0.8]20[/rainbow] unique waves.[/i]").set_metadata("name", "")
+	add_text_entry("[i]But you will stand proudly through [rainbow freq=1.0 sat=0.4 val=0.8]8[/rainbow] unique waves.[/i]").set_metadata("name", "")
 
 	add_text_entry("[i][b]Play as one of three playable characters![/b][/i]").set_metadata("name", "")
 	add_text_entry("[i][b]Spend your battle trophies on upgrades![/b][/i]").set_metadata("name", "")
