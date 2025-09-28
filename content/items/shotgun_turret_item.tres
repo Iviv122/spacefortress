@@ -12,6 +12,6 @@ name = "Shotgun turret"
 description = "Shoots in player mouse direction
 Shoots 3 bullets in fan patter
 deals full player damage per bullet
-1/4 of player attack speed
+1/8 of player attack speed
 "
 metadata/_custom_type_script = "uid://dxgbobl7fivmb"

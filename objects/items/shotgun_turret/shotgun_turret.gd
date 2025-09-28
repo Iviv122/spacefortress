@@ -29,7 +29,7 @@ func shoot() -> void:
 func _process(delta):
 
 
-	current_reload -= delta / 4 * PlayerInstance.stats.Get(Stats.StatType.ReloadSpeed)
+	current_reload -= delta / 8 * PlayerInstance.stats.Get(Stats.StatType.ReloadSpeed)
 	if current_reload <= 0:
 		current_reload = 1
 		shoot()
