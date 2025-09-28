@@ -39,6 +39,7 @@ func SetStat(s : Stat) -> void:
 	stat = s.duplicate()
 	stat._a *= rare+1
 	text = Stats.Name(stat.type()) + "+" + str(stat.amount())
+	tooltip_text = Stats.Description(stat.type())
 
 
 func _pressed() -> void:
