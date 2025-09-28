@@ -12,7 +12,6 @@ var expirience: Expirience
 var misc_stats: MiscStats
 var inventory: Inventory
 
-
 func on_start():
 		inventory.on_start()
 

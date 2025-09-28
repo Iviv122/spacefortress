@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqytdg6s0i5uj"]
+
+[ext_resource type="PackedScene" uid="uid://bl1ul621fkvxw" path="res://prefabs/dialogs/simple_log.tscn" id="1_uhsn5"]
+[ext_resource type="Script" uid="uid://dhpqsn6wusifm" path="res://objects/dialogs/second_monolog.gd" id="2_uhsn5"]
+[ext_resource type="Texture2D" uid="uid://bw50doxu7clpx" path="res://raw_assets/sprite/blacksquare.png" id="3_bbdgs"]
+[ext_resource type="Script" uid="uid://dhfcoqvww3sb0" path="res://objects/dialogs/translation_square.gd" id="3_ge7af"]
+[ext_resource type="PackedScene" uid="uid://bssr6lkahus37" path="res://prefabs/scenes/character_select.tscn" id="5_c86a0"]
+
+[node name="Second" type="CanvasLayer"]
+
+[node name="DialogueEngineDemoVBoxContainer" parent="." instance=ExtResource("1_uhsn5")]
+dialogue_gdscript = ExtResource("2_uhsn5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." node_paths=PackedStringArray("dialog")]
+z_index = 100
+scale = Vector2(200, 200)
+texture = ExtResource("3_bbdgs")
+script = ExtResource("3_ge7af")
+next_scene = ExtResource("5_c86a0")
+dialog = NodePath("../DialogueEngineDemoVBoxContainer")
+metadata/_custom_type_script = "uid://dhfcoqvww3sb0"
