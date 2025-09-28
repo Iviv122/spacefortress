@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://captxp72wnpal"]
+[gd_scene load_steps=13 format=3 uid="uid://captxp72wnpal"]
 
 [ext_resource type="Script" uid="uid://chxb0ltxt7jcb" path="res://objects/game/fight_entry_point.gd" id="1_r56t2"]
 [ext_resource type="PackedScene" uid="uid://d0a1vwr71j61n" path="res://prefabs/player_things/player_body.tscn" id="2_12pgg"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://uqlfdyl8q3wk" path="res://prefabs/player_things/turret_spawner.tscn" id="6_12pgg"]
 [ext_resource type="Shader" uid="uid://2tplgl5hxkcc" path="res://shaders/background_grid.gdshader" id="6_yvc8c"]
 [ext_resource type="PackedScene" uid="uid://d14drxh028m3x" path="res://prefabs/menus/game_over_canvas.tscn" id="7_nvskj"]
+[ext_resource type="PackedScene" uid="uid://cxgg02bx84y07" path="res://prefabs/menus/pause_menu.gd.tscn" id="8_s5sky"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d0tpm"]
 shader = ExtResource("6_yvc8c")
@@ -29,7 +30,7 @@ height = 4000
 
 [node name="Fight" type="Node2D"]
 script = ExtResource("1_r56t2")
-to_spawn = Array[PackedScene]([ExtResource("2_12pgg"), ExtResource("3_nvskj"), ExtResource("4_s5sky"), ExtResource("5_kn4wn"), ExtResource("6_12pgg"), ExtResource("7_nvskj")])
+to_spawn = Array[PackedScene]([ExtResource("2_12pgg"), ExtResource("3_nvskj"), ExtResource("4_s5sky"), ExtResource("5_kn4wn"), ExtResource("6_12pgg"), ExtResource("7_nvskj"), ExtResource("8_s5sky")])
 metadata/_custom_type_script = "uid://chxb0ltxt7jcb"
 
 [node name="backgroundMajor" type="Sprite2D" parent="."]

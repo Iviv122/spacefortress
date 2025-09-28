@@ -17,6 +17,7 @@ func _setup() -> void:
 	add_text_entry("[b]...[/b]").set_metadata("name", "")
 	add_text_entry("[b]...[/b]").set_metadata("name", "")
 	add_text_entry("[b]...[/b]").set_metadata("name", "")
-
+	
+	add_text_entry("You can pause game by clicking [b]escape[/b] button!").set_metadata("name", "")
 	add_text_entry("[i]Dark sci-fi world awaits for [shake rate=20.0 level=5 connected=1][b]you[/b][/shake][/i]").set_metadata("name", "")
 	

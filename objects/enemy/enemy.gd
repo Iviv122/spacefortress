@@ -6,6 +6,9 @@ class_name Enemy
 var dir: Vector2
 
 func damage(d: float):
+		var roll = randf()
+		if roll < PlayerInstance.stats.Get(Stats.StatType.CritChance):
+			health -=d
 		health -= d
 		if health <= 0:
 			die()

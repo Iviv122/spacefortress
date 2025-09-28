@@ -3,13 +3,15 @@ class_name Shop
 
 @export var level_up : PackedScene
 @export var shop_area : PackedScene
+@export var pause_menu : PackedScene
 @export var fightscene : String 
 
 var entered_shop = false
 
 func next_step() ->void:
 	for i in get_children():
-		i.queue_free()
+		if i is not PauseMenu:
+			i.queue_free()
 
 
 	if PlayerInstance.expirience.skill_points > 0:
@@ -26,5 +28,6 @@ func next_step() ->void:
 
 func _ready():
 	add_to_group("next_step")
+	add_child(pause_menu.instantiate())
 	print(str(fightscene))
 	next_step()

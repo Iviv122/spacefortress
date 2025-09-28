@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d14drxh028m3x"]
 
-[ext_resource type="Script" uid="uid://cjphrkn3wvqk0" path="res://objects/in_fight/restart.gd" id="1_dl6f0"]
 [ext_resource type="Script" uid="uid://csilrkwbwsrv8" path="res://objects/in_fight/game_over.gd" id="1_vdp7h"]
+[ext_resource type="Script" uid="uid://cj6b32hye0far" path="res://objects/general_ui/load_scene_name.gd" id="2_x8dah"]
 
 [node name="GameOverCanvas" type="CanvasLayer"]
 layer = 15
@@ -32,17 +32,11 @@ grow_vertical = 2
 [node name="Restart" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "Go to main menu"
-script = ExtResource("1_dl6f0")
-metadata/_custom_type_script = "uid://cjphrkn3wvqk0"
+script = ExtResource("2_x8dah")
+scene = "res://prefabs/scenes/main.tscn"
 
 [node name="Restart2" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Restart as same cahracter"
-script = ExtResource("1_dl6f0")
-metadata/_custom_type_script = "uid://cjphrkn3wvqk0"
-
-[node name="Restart3" type="Button" parent="Panel/VBoxContainer"]
-layout_mode = 2
 text = "Go to character select"
-script = ExtResource("1_dl6f0")
-metadata/_custom_type_script = "uid://cjphrkn3wvqk0"
+script = ExtResource("2_x8dah")
+scene = "res://prefabs/scenes/character_select.tscn"

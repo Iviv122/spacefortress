@@ -3,6 +3,9 @@ class_name CharacterSelect
 
 @export var item_list : ItemsList 
 
+func _ready():
+	Engine.time_scale = 1
+
 func _pressed() -> void:
 	for i in item_list.list:
 		PlayerInstance.inventory.append(i)
