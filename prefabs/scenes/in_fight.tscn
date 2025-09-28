@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://captxp72wnpal"]
+[gd_scene load_steps=15 format=3 uid="uid://captxp72wnpal"]
 
 [ext_resource type="Script" uid="uid://chxb0ltxt7jcb" path="res://objects/game/fight_entry_point.gd" id="1_r56t2"]
 [ext_resource type="PackedScene" uid="uid://d0a1vwr71j61n" path="res://prefabs/player_things/player_body.tscn" id="2_12pgg"]
@@ -9,6 +9,8 @@
 [ext_resource type="Shader" uid="uid://2tplgl5hxkcc" path="res://shaders/background_grid.gdshader" id="6_yvc8c"]
 [ext_resource type="PackedScene" uid="uid://d14drxh028m3x" path="res://prefabs/menus/game_over_canvas.tscn" id="7_nvskj"]
 [ext_resource type="PackedScene" uid="uid://cxgg02bx84y07" path="res://prefabs/menus/pause_menu.tscn" id="8_s5sky"]
+[ext_resource type="Script" uid="uid://skd2n2uacb1o" path="res://objects/misc/load_music.gd" id="10_yvc8c"]
+[ext_resource type="AudioStream" uid="uid://dh5anr7xxtmpq" path="res://raw_assets/music/ld47.wav" id="11_rgkud"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d0tpm"]
 shader = ExtResource("6_yvc8c")
@@ -37,6 +39,8 @@ metadata/_custom_type_script = "uid://chxb0ltxt7jcb"
 z_index = -5
 material = SubResource("ShaderMaterial_d0tpm")
 texture = SubResource("GradientTexture2D_hjecn")
+script = ExtResource("10_yvc8c")
+music = Array[AudioStream]([ExtResource("11_rgkud")])
 
 [node name="backgroundMinor" type="Sprite2D" parent="."]
 z_index = -5

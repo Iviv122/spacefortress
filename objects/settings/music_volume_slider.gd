@@ -8,4 +8,4 @@ func _ready() -> void:
 	value = SoundManagerInstance.music_player.get_volume_db()
 
 func _value_changed(new_value: float) -> void:
-	SoundManagerInstance.music_player.set_volume_db(new_value)
+	SoundManagerInstance.set_music_volume(new_value)

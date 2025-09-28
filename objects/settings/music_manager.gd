@@ -18,6 +18,10 @@ func _ready():
 	music_player.play()
 
 
+func set_music_volume(value : float):
+	music_volume =  value
+	music_player.volume_db = music_volume 
+
 func load_sound(sound : AudioStream):
 	effects_player.stop()
 
@@ -26,7 +30,6 @@ func load_sound(sound : AudioStream):
 
 func fade_sound_out() ->void:
 	var tween = get_tree().create_tween()
-	music_volume = music_player.get_volume_db()
 	tween.tween_property(music_player,"volume_db",-80,fade_duration)
 	tween.play()
 
