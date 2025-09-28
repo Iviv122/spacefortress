@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://c007vyjb26sld"]
+
+[ext_resource type="PackedScene" uid="uid://bp7dhy2no7krm" path="res://prefabs/menus/settings_panel.tscn" id="2_1g6dc"]
+
+[node name="Settings" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SettingsPanel" parent="CanvasLayer" instance=ExtResource("2_1g6dc")]
+inseparate_scene = true
+
+[editable path="CanvasLayer/SettingsPanel"]

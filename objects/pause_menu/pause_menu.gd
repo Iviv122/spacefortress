@@ -1,8 +1,16 @@
 extends CanvasLayer
 class_name PauseMenu
 
+@export var start_scene : PackedScene
+
 func _ready() -> void:
 	disappear()
+	place(start_scene)
+
+func place(menu : PackedScene) -> void:
+	for i in get_children():
+		i.queue_free()
+	add_child(menu.instantiate())
 
 func appear() -> void:
 	Engine.time_scale = 0

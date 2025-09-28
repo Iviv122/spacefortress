@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5sk1wfbvfsis"]
+
+[ext_resource type="Script" uid="uid://bdcsato1vaj88" path="res://objects/pause_menu/continue_button.gd" id="1_klwpx"]
+[ext_resource type="Script" uid="uid://d0ufw4sc5fiqq" path="res://objects/pause_menu/open_settings.gd" id="2_ab674"]
+[ext_resource type="Script" uid="uid://c3s7p4e4mayo1" path="res://objects/pause_menu/load_and_die.gd" id="2_h3lcf"]
+
+[node name="pause_menu" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Continue"
+script = ExtResource("1_klwpx")
+metadata/_custom_type_script = "uid://bdcsato1vaj88"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+script = ExtResource("2_ab674")
+scene = "res://prefabs/menus/settings_panel.tscn"
+metadata/_custom_type_script = "uid://d0ufw4sc5fiqq"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Character select"
+script = ExtResource("2_h3lcf")
+scene = "res://prefabs/scenes/character_select.tscn"
+metadata/_custom_type_script = "uid://c3s7p4e4mayo1"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Main menu"
+script = ExtResource("2_h3lcf")
+scene = "res://prefabs/scenes/main.tscn"
+metadata/_custom_type_script = "uid://c3s7p4e4mayo1"

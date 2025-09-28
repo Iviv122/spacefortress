@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxgg02bx84y07"]
+
+[ext_resource type="Script" uid="uid://dbjooyh6powx6" path="res://objects/pause_menu/pause_menu.gd" id="1_klwpx"]
+[ext_resource type="PackedScene" uid="uid://c5sk1wfbvfsis" path="res://prefabs/menus/pause_menu_panel.tscn" id="2_h3lcf"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+layer = 99999
+script = ExtResource("1_klwpx")
+start_scene = ExtResource("2_h3lcf")
+metadata/_custom_type_script = "uid://dbjooyh6powx6"

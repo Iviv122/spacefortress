@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cfxjn3k8k2qse"]
+[gd_scene load_steps=8 format=3 uid="uid://cfxjn3k8k2qse"]
 
 [ext_resource type="Shader" uid="uid://2tplgl5hxkcc" path="res://shaders/background_grid.gdshader" id="1_u4uue"]
 [ext_resource type="Script" uid="uid://k6dlxw7ixd8i" path="res://objects/general_ui/load_scene.gd" id="2_1812j"]
 [ext_resource type="PackedScene" uid="uid://dqfhsardkx6ks" path="res://prefabs/dialogs/first_dialog.tscn" id="3_kxjdh"]
+[ext_resource type="PackedScene" uid="uid://c007vyjb26sld" path="res://prefabs/scenes/settings.tscn" id="4_kxjdh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1812j"]
 shader = ExtResource("1_u4uue")
@@ -71,6 +72,9 @@ metadata/_custom_type_script = "uid://k6dlxw7ixd8i"
 [node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "Settings"
+script = ExtResource("2_1812j")
+scene = ExtResource("4_kxjdh")
+metadata/_custom_type_script = "uid://k6dlxw7ixd8i"
 
 [node name="Button4" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
