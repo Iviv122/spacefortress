@@ -1,10 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://fw4huedw7cqm"]
+[gd_scene load_steps=4 format=3 uid="uid://fw4huedw7cqm"]
 
 [ext_resource type="Script" uid="uid://b8e1buskt1ibv" path="res://objects/enemy/spawner.gd" id="1_e8nlb"]
 [ext_resource type="Resource" uid="uid://d25i5wd37rvyc" path="res://content/wave_composition.tres" id="2_ajqkl"]
+[ext_resource type="PackedScene" uid="uid://dfgbw7vs4qlkj" path="res://prefabs/scenes/win_screen.tscn" id="3_o6vva"]
 
 [node name="Spawner" type="Node2D"]
 script = ExtResource("1_e8nlb")
 wave_composition = ExtResource("2_ajqkl")
+win_screen = ExtResource("3_o6vva")
 radius = 8.0
 metadata/_custom_type_script = "uid://b8e1buskt1ibv"
